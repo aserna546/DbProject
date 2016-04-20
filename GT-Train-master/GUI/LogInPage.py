@@ -832,8 +832,7 @@ class GUI:
         search1=Button(self.rootWinUR,text="Search",command=self.update)
         search1.grid(row=3,column=1,padx=10,pady=15,sticky=E)
 
-     def updateReservation(self):
-        
+    def updateReservation(self):
         self.rootWinUR=Toplevel()
         self.rootWinUR.title("Update Reservation")
         self.rootWinCF.withdraw()
