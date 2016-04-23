@@ -60,7 +60,9 @@ class GUI:
         self.rootWinSearch.withdraw()
 
         frame = Frame(self.rootWinSelectD)
-        frame.pack(side=TOP)
+        frame.pack(side=LEFT)
+        frame2 = Frame(self.rootWinSelectD)
+        frame2.pack(side=BOTTOM)
 
         #tree = self.departTree(frame)
 
@@ -81,10 +83,7 @@ class GUI:
         if not results:
             r = messagebox.showerror("Error!", "No Train's Follow Criteria.")
         i = 0
-        # for result in results:
-        #     tree.insert('', i, text='', values=result)
-        #     i += 1
-        # print(results)
+
         self.widgets = {}
         dc = Label(frame, text="Train Number", font=("Calibri", 12, "bold"))
         dc.grid(row=1, column=0, sticky='W')
@@ -94,26 +93,28 @@ class GUI:
         dc3.grid(row=1, column=2, padx=30, pady=10, sticky='W')
         dc4 = Label(frame, text="2nd Class Price", font=("Calibri", 12, "bold"))
         dc4.grid(row=1, column=4, padx=30, pady=10, sticky='W')
-        self.price = IntVar()
+        self.train = StringVar()
+        self.Price1 = IntVar()
+        self.price2 = IntVar()
         row = 1
         for TrainNum, Dur, Arrivalt, DepartT in (results):
             row += 1
             self.widgets[TrainNum] = {
-                "Train Number": Label(frame, text=TrainNum),
-                "Dur": Label(frame, text=Dur),
-                #"Arrival Time": Label(frame, text=Arrivalt),
-                "Arrival Time": RADIOBUTTON(frame, text = str(Arrivalt), variable = self.price,value = Arrivalt),
-                "Depart Time": RADIOBUTTON(frame,text = str(DepartT), variable = self.price, value = DepartT)
-
-                #"start_time": tk.Label(table, text=start_time),
-                #"end_time": tk.Label(table, text=start_time)
+                "Train Number": Radiobutton(frame, text=TrainNum,variable=self.train,value=TrainNum),
+                "Dur": Label(frame, text=Dur)
+                #"Arrival Time": Radiobutton(frame, text = str(Arrivalt), variable = self.price,value = Arrivalt),
+                #"Depart Time": Radiobutton(frame,text = str(DepartT), variable = self.price, value = DepartT)
             }
 
             self.widgets[TrainNum]["Train Number"].grid(row=row, column=0, sticky="nsew")
-            self.widgets[TrainNum]["Station"].grid(row=row, column=1, sticky="nsew")
-            self.widgets[TrainNum]["Arrival Time"].grid(row=row, column=2, sticky="nsew")
+            self.widgets[TrainNum]["Dur"].grid(row=row, column=1, sticky="nsew")
+            pr1=Radiobutton(frame, text=str(Arrivalt), variable=self.Price1, value=Arrivalt)
+            pr1.grid(row=row,column=2,sticky="nsew")
+            pr2 = Radiobutton(frame,text = str(DepartT), variable = self.price2, value=DepartT)
+            pr2.grid(row=row,column=3,sticky="nsew")
+            #self.widgets[TrainNum]["Arrival Time"].grid(row=row, column=2, sticky="nsew")
 
-            self.widgets[TrainNum]["Depart Time"].grid(row=row, column=3, sticky="nsew")
+            #self.widgets[TrainNum]["Depart Time"].grid(row=row, column=3, sticky="nsew")
 
         frame.grid_columnconfigure(1, weight=1)
         frame.grid_columnconfigure(2, weight=1)
@@ -121,7 +122,7 @@ class GUI:
         frame.grid_rowconfigure(row + 1, weight=1)
 
 
-        b2=Button(frame, text ="Next", command = self.passengerInfo)
+        b2=Button(frame2, text ="Next", command = self.passengerInfo)
         b2.pack(side=RIGHT)
 
     def passengerInfo(self):
@@ -148,6 +149,10 @@ class GUI:
         option.pack(side=RIGHT)
         disclamer = Label(frame2, text="Every passenger can bring upto 4 baggage. 2 free of charge, 2 for $30 per bag")
         disclamer.pack()
+
+        #print(self.price1[0].get())
+        print(self.train.get(),self.Price1.get(),self.price2.get())
+
 
         passName = Label(frame3, text="Passenger Name")
         passName.pack(side=LEFT)

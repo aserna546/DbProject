@@ -69,17 +69,12 @@ class GUI:
                 "Station": Label(frame1, text=Station),
                 "Arrival Time": Label(frame1, text=Arrivalt),
                 "Depart Time": Label(frame1, text=DepartT),
-                #"start_time": tk.Label(table, text=start_time),
-                #"end_time": tk.Label(table, text=start_time)
             }
 
             self.widgets[TrainNum]["Train Number"].grid(row=row, column=0, sticky="nsew")
             self.widgets[TrainNum]["Station"].grid(row=row, column=1, sticky="nsew")
             self.widgets[TrainNum]["Arrival Time"].grid(row=row, column=2, sticky="nsew")
             self.widgets[TrainNum]["Depart Time"].grid(row=row, column=3, sticky="nsew")
-            #self.widgets[rowid]["num_seconds"].grid(row=row, column=4, sticky="nsew")
-            #self.widgets[rowid]["start_time"].grid(row=row, column=5, sticky="nsew")
-            #self.widgets[rowid]["end_time"].grid(row=row, column=6, sticky="nsew")
 
         frame1.grid_columnconfigure(1, weight=1)
         frame1.grid_columnconfigure(2, weight=1)
