@@ -65,12 +65,16 @@ class GUI:
         cn2 = Label(self.rootWin, text="Card Number")
         cn2.grid(row=4, column=2, padx=30, sticky=W)
 
-        cards = [2541]  # get cards from database
+        db = self.connect()
+        cursor = db.cursor()
+        query = "SELECT RIGHT(CardNumber,4) FROM PaymentInfo WHERE Username='kberman'"
+        cursor.execute(query)
+        cards = [card[0] for card in cursor.fetchall()]  # get cards from database
         self.delCard = StringVar()
         pulldownDC = OptionMenu(self.rootWin, self.delCard, *cards)
         pulldownDC.grid(row=4, column=3, padx=15, pady=5, sticky=W)
 
-        submit2 = Button(self.rootWin, text="Submit")#, command=self.deleteCard)
+        submit2 = Button(self.rootWin, text="Submit", command=self.deleteCard)
         submit2.grid(row=8, column=2, columnspan=2, pady=20)
 
     def addCard(self):
@@ -98,7 +102,11 @@ class GUI:
                   VALUES( '%s', '%s',  '%s', '%s', 'kberman')" % (self.cnE.get(), self.cvvE.get(), self.dateE.get(),self.ncE.get())
         cursor.execute(query)
 
-    #def deleteCard(self):
+    def deleteCard(self):
+        db = self.connect()
+        cursor = db.cursor()
+        query = "DELETE FROM PaymentInfo WHERE RIGHT(CardNumber,4) ='%s'" % (self.delCard.get())
+        cursor.execute(query)
        # delete card info from database
 
     def connect(self):
