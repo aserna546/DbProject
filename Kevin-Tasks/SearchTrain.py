@@ -307,6 +307,10 @@ class GUI:
         Label(frame,text='Reservation ID is:',font = ("Calibri",12,"bold")).grid(row=0,column=0,padx=10)
         Label(frame,text='%s'%str(int(resID[0])+1),font=("Calibri",12,"bold")).grid(row=0,column=1,padx=10)
 
+        frame2 = Frame(self.submitRes)
+        frame2.pack(side=TOP)
+        Button(frame2,text='Go Back to Choose Functionality')
+
 
 
     def departTree(self, frame):

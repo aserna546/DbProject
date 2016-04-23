@@ -88,30 +88,30 @@
       <file leaf-file-name="SearchTrain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="301" column="77" selection-start-line="301" selection-start-column="77" selection-end-line="301" selection-end-column="77" />
+            <state relative-caret-position="411">
+              <caret line="311" column="60" selection-start-line="311" selection-start-column="60" selection-end-line="311" selection-end-column="60" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1461455745203" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-                <marker date="1461455745203" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-                <marker date="1461455745203" expanded="true" signature="8108:8697" placeholder="select Conca... " />
-                <marker date="1461455745203" expanded="true" signature="8108:8722" placeholder="select Conca... " />
-                <marker date="1461455745203" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
-                <marker date="1461455745203" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
-                <marker date="1461455745203" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
-                <marker date="1461455745203" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
-                <marker date="1461455745203" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
-                <marker date="1461455745203" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
-                <marker date="1461455745203" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
-                <marker date="1461455745203" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
-                <marker date="1461455745203" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
-                <marker date="1461455745203" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
-                <marker date="1461455745203" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
-                <marker date="1461455745203" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
-                <marker date="1461455745203" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
-                <marker date="1461455745203" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
-                <marker date="1461455745203" expanded="true" signature="15806:15827" placeholder="SELECT R FRO... PaymentInfo" />
-                <marker date="1461455745203" expanded="true" signature="15849:15870" placeholder="SELECT L FRO... Station" />
+                <marker date="1461455969969" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+                <marker date="1461455969969" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+                <marker date="1461455969969" expanded="true" signature="8108:8697" placeholder="select Conca... " />
+                <marker date="1461455969969" expanded="true" signature="8108:8722" placeholder="select Conca... " />
+                <marker date="1461455969969" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
+                <marker date="1461455969969" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
+                <marker date="1461455969969" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
+                <marker date="1461455969969" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
+                <marker date="1461455969969" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
+                <marker date="1461455969969" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
+                <marker date="1461455969969" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
+                <marker date="1461455969969" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
+                <marker date="1461455969969" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
+                <marker date="1461455969969" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
+                <marker date="1461455969969" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
+                <marker date="1461455969969" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
+                <marker date="1461455969969" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
+                <marker date="1461455969969" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
+                <marker date="1461455969969" expanded="true" signature="15938:15959" placeholder="SELECT R FRO... PaymentInfo" />
+                <marker date="1461455969969" expanded="true" signature="15981:16002" placeholder="SELECT L FRO... Station" />
               </folding>
             </state>
           </provider>
@@ -673,26 +673,26 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461455745203" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461455745203" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="8108:8697" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="8108:8722" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
-            <marker date="1461455745203" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
-            <marker date="1461455745203" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
-            <marker date="1461455745203" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
-            <marker date="1461455745203" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="15806:15827" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="15849:15870" placeholder="SELECT L FRO... Station" />
+            <marker date="1461455969969" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461455969969" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="8108:8697" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="8108:8722" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
+            <marker date="1461455969969" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
+            <marker date="1461455969969" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
+            <marker date="1461455969969" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
+            <marker date="1461455969969" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="15938:15959" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="15981:16002" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
@@ -783,26 +783,26 @@
           <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461455745203" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461455745203" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="8108:8697" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="8108:8722" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
-            <marker date="1461455745203" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
-            <marker date="1461455745203" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
-            <marker date="1461455745203" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
-            <marker date="1461455745203" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="15806:15827" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="15849:15870" placeholder="SELECT L FRO... Station" />
+            <marker date="1461455969969" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461455969969" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="8108:8697" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="8108:8722" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
+            <marker date="1461455969969" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
+            <marker date="1461455969969" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
+            <marker date="1461455969969" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
+            <marker date="1461455969969" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="15938:15959" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="15981:16002" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
@@ -1031,30 +1031,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="301" column="77" selection-start-line="301" selection-start-column="77" selection-end-line="301" selection-end-column="77" />
+        <state relative-caret-position="411">
+          <caret line="311" column="60" selection-start-line="311" selection-start-column="60" selection-end-line="311" selection-end-column="60" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461455745203" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461455745203" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="8108:8697" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="8108:8722" placeholder="select Conca... " />
-            <marker date="1461455745203" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
-            <marker date="1461455745203" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
-            <marker date="1461455745203" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
-            <marker date="1461455745203" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
-            <marker date="1461455745203" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
-            <marker date="1461455745203" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
-            <marker date="1461455745203" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
-            <marker date="1461455745203" expanded="true" signature="15806:15827" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461455745203" expanded="true" signature="15849:15870" placeholder="SELECT L FRO... Station" />
+            <marker date="1461455969969" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461455969969" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="8108:8697" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="8108:8722" placeholder="select Conca... " />
+            <marker date="1461455969969" expanded="true" signature="9021:9080" placeholder="select 2ndCl... TrainRoute" />
+            <marker date="1461455969969" expanded="true" signature="9324:9383" placeholder="select 1stCl... Train" />
+            <marker date="1461455969969" expanded="true" signature="11673:11725" placeholder="select IsStu... Customer" />
+            <marker date="1461455969969" expanded="true" signature="12525:12597" placeholder="SELECT RIGHT... " />
+            <marker date="1461455969969" expanded="true" signature="13158:13199" placeholder="select count... Reserves" />
+            <marker date="1461455969969" expanded="true" signature="13588:13700" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13724" placeholder="Insert into Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13725" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13779" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13588:13915" placeholder="INSERT INTO Reserves... " />
+            <marker date="1461455969969" expanded="true" signature="13960:14026" placeholder="Select CardN... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="14135:14206" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14230" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="14135:14274" placeholder="INSERT INTO Reservation... " />
+            <marker date="1461455969969" expanded="true" signature="15938:15959" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461455969969" expanded="true" signature="15981:16002" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
