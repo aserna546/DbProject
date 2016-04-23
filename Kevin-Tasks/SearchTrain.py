@@ -156,8 +156,8 @@ class GUI:
 
         passName = Label(frame3, text="Passenger Name")
         passName.pack(side=LEFT)
-        name = StringVar()
-        nameEnt = Entry(frame3, textvariable=name, width=10)
+        self.name = StringVar()
+        nameEnt = Entry(frame3, textvariable=self.name, width=10)
         nameEnt.pack(side=RIGHT)
 
         b1 = Button(frame4, text="Back")
@@ -168,7 +168,7 @@ class GUI:
     def makeReservation(self):
         self.passengerInfoWin = Toplevel()
         self.passengerInfoWin.withdraw()
-        self.reservationWin.deiconify()
+        self.reservationWin = Toplevel()
         self.reservationWin.title("Make Reservation")
 
         frame = Frame(self.reservationWin)
@@ -183,10 +183,58 @@ class GUI:
         frame5.pack(side=BOTTOM)
 
         selected = Label(frame, text="Currently Selected")
-        selected.pack(side=LEFT)
+        selected.grid(row=1,column=0)
+        departsFrom = self.departsFrom.get()
+        departsFrom = departsFrom[departsFrom.index("(") + 1:departsFrom.rindex(")")]
+        arrivesAt = self.arrivesAt.get()
+        arrivesAt = arrivesAt[arrivesAt.index("(") + 1:arrivesAt.rindex(")")]
+        sql = "select Concat(Depart,'-',Arrival,' (',Duration, ')') as Time from (select TrainNumber, IFNULL(Timediff(Max(ArrivalTime),Min(y.DepartureTime)),0) as Duration, Max(y.ArrivalTime) as Arrival, Min(y.DepartureTime) as Depart, y.1stClassPrice, y.2ndClassPrice\
+                    From (SELECT Stop.*,1stClassPrice,2ndClassPrice From Stop\
+                    JOIN TrainRoute ON TrainRoute.TrainNumber = Stop.TrainNumber)\
+                    as y\
+                    Where y.Name = '%s' OR y.Name = '%s'\
+                    Group By y.TrainNumber) as x\
+                    where x.duration>0 and x.TrainNumber = '%s';" % (departsFrom, arrivesAt,self.train.get())
+        db = self.connect()
+        cursor = db.cursor()
+        cursor.execute(sql)
+        self.dVar = cursor.fetchall()[0]
+        cursor.close()
 
-        tree = self.selectTree(frame)
-
+        if not self.Price1.get():
+            classVar = "2nd Class"
+            sql="select 2ndClassPrice From TrainRoute where TrainNumber='%s'" % (self.train.get())
+            db = self.connect()
+            cursor=db.cursor()
+            cursor.execute(sql)
+            pr = [pri[0] for pri in cursor.fetchall()]
+        else:
+            classVar = "1st Class"
+            sql="select 1stClassPrice From TrainRoute where TrainNumber='%s'" % (self.train.get())
+            db = self.connect()
+            cursor=db.cursor()
+            cursor.execute(sql)
+            pr = [pri[0] for pri in cursor.fetchall()]
+        #selectVal = [self.train.get(),self.departDatesv.get(),self.dVar.get(),departsFrom,arrivesAt, classVar,pr,self.bags.get(),self.name.get()]
+        # selectVal = [,arrivesAt, classVar,pr,self.bags.get(),self.name.get()]
+        Label(frame, text=self.train.get()).grid(row=3,column=0,sticky="nsew")
+        Label(frame, text=self.departDatesv.get()).grid(row=3,column=1,sticky="nsew")
+        Label(frame, text=self.dVar).grid(row=3,column=2,sticky="nsew")
+        Label(frame, text=departsFrom).grid(row=3,column=3,sticky="nsew")
+        Label(frame, text=arrivesAt).grid(row=3,column=4,sticky="nsew")
+        Label(frame, text=classVar).grid(row=3,column=5,sticky="nsew")
+        Label(frame, text=pr).grid(row=3,column=6,sticky="nsew")
+        Label(frame, text=self.bags.get()).grid(row=3,column=7,sticky="nsew")
+        Label(frame, text=self.name.get()).grid(row=3,column=8,sticky="nsew")
+        Label(frame, text="Train Number", font=("Calibri", 12, "bold")).grid(row=2,column=0,sticky='nsew')
+        Label(frame, text="Date", font=("Calibri", 12, "bold")).grid(row=2, column=1, sticky='nsew')
+        Label(frame, text="Time", font=("Calibri", 12, "bold")).grid(row=2, column=2, sticky='nsew')
+        Label(frame, text="Departs From", font=("Calibri", 12, "bold")).grid(row=2, column=3, sticky='nsew')
+        Label(frame, text="Arrives At", font=("Calibri", 12, "bold")).grid(row=2, column=4, sticky='nsew')
+        Label(frame, text="Class", font=("Calibri", 12, "bold")).grid(row=2, column=5, sticky='nsew')
+        Label(frame, text="Price", font=("Calibri", 12, "bold")).grid(row=2, column=6, sticky='nsew')
+        Label(frame, text="#of Baggages", font=("Calibri", 12, "bold")).grid(row=2, column=7, sticky='nsew')
+        Label(frame, text="Passenger Name", font=("Calibri", 12, "bold")).grid(row=2, column=8, sticky='nsew')
 
     def departTree(self, frame):
         tree = Treeview(frame, selectmode='browse')

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9022942-6991-4aa6-b4fb-40ab1facb538" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py" afterPath="$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Kevin-Tasks/viewTrainSchedule.py" afterPath="$PROJECT_DIR$/Kevin-Tasks/viewTrainSchedule.py" />
     </list>
     <ignored path="DbProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +17,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DbProject$master.coverage" NAME="master Coverage Results" MODIFIED="1461119312059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CS4400-master" />
-    <SUITE FILE_PATH="coverage/DbProject$SearchTrain.coverage" NAME="SearchTrain Coverage Results" MODIFIED="1461442201022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kevin-Tasks" />
+    <SUITE FILE_PATH="coverage/DbProject$SearchTrain.coverage" NAME="SearchTrain Coverage Results" MODIFIED="1461446587621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kevin-Tasks" />
     <SUITE FILE_PATH="coverage/DbProject$phase3.coverage" NAME="phase3 Coverage Results" MODIFIED="1461118843401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Train_4400-master" />
     <SUITE FILE_PATH="coverage/DbProject$viewTrainSchedule.coverage" NAME="viewTrainSchedule Coverage Results" MODIFIED="1461430985387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kevin-Tasks" />
     <SUITE FILE_PATH="coverage/DbProject$Newphase3.coverage" NAME="Newphase3 Coverage Results" MODIFIED="1461292317452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Train_4400-master" />
@@ -38,7 +36,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kevin-Tasks/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-167">
+            <state relative-caret-position="853">
               <caret line="62" column="60" selection-start-line="61" selection-start-column="8" selection-end-line="62" selection-end-column="60" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -61,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewTrainSchedule.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewTrainSchedule.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kevin-Tasks/viewTrainSchedule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="76" column="88" selection-start-line="76" selection-start-column="88" selection-end-line="76" selection-end-column="88" />
+            <state relative-caret-position="-17">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <marker date="1461436509441" expanded="true" signature="1086:1145" placeholder="SELECT * FRO... Stop" />
@@ -78,7 +76,7 @@
       <file leaf-file-name="searchReservation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kevin-Tasks/searchReservation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="346">
               <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -87,17 +85,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchTrain.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchTrain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="153" column="67" selection-start-line="153" selection-start-column="67" selection-end-line="153" selection-end-column="67" />
+            <state relative-caret-position="88">
+              <caret line="221" column="71" selection-start-line="221" selection-start-column="71" selection-end-line="221" selection-end-column="71" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1461442143394" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-                <marker date="1461442143394" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-                <marker date="1461442143394" expanded="true" signature="9051:9072" placeholder="SELECT R FRO... PaymentInfo" />
-                <marker date="1461442143394" expanded="true" signature="9094:9115" placeholder="SELECT L FRO... Station" />
+                <marker date="1461446587579" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+                <marker date="1461446587579" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+                <marker date="1461446587579" expanded="true" signature="8110:8699" placeholder="select Conca... " />
+                <marker date="1461446587579" expanded="true" signature="8110:8724" placeholder="select Conca... " />
+                <marker date="1461446587579" expanded="true" signature="9007:9066" placeholder="select 2ndCl... Train" />
+                <marker date="1461446587579" expanded="true" signature="9305:9364" placeholder="select 1stCl... Train" />
+                <marker date="1461446587579" expanded="true" signature="12570:12591" placeholder="SELECT R FRO... PaymentInfo" />
+                <marker date="1461446587579" expanded="true" signature="12613:12634" placeholder="SELECT L FRO... Station" />
               </folding>
             </state>
           </provider>
@@ -138,8 +140,8 @@
       <file leaf-file-name="Newphase3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Train_4400-master/Newphase3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1326">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="-110">
+              <caret line="511" column="39" selection-start-line="511" selection-start-column="35" selection-end-line="511" selection-end-column="39" />
               <folding>
                 <marker date="1461106367608" expanded="true" signature="5257:5338" placeholder="SELECT * FRO... CUSTOMER" />
                 <marker date="1461106367608" expanded="true" signature="5468:5548" placeholder="SELECT * FRO... MANAGER" />
@@ -200,10 +202,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="x" value="-7" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -570,7 +571,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -579,7 +580,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34464753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34874505" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -659,10 +660,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461442143394" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461442143394" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461442143394" expanded="true" signature="9051:9072" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461442143394" expanded="true" signature="9094:9115" placeholder="SELECT L FRO... Station" />
+            <marker date="1461446587579" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461446587579" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461446587579" expanded="true" signature="8110:8699" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="8110:8724" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="9007:9066" placeholder="select 2ndCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="9305:9364" placeholder="select 1stCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="12570:12591" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461446587579" expanded="true" signature="12613:12634" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
@@ -753,10 +758,14 @@
           <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461442143394" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461442143394" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461442143394" expanded="true" signature="9051:9072" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461442143394" expanded="true" signature="9094:9115" placeholder="SELECT L FRO... Station" />
+            <marker date="1461446587579" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461446587579" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461446587579" expanded="true" signature="8110:8699" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="8110:8724" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="9007:9066" placeholder="select 2ndCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="9305:9364" placeholder="select 1stCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="12570:12591" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461446587579" expanded="true" signature="12613:12634" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
@@ -912,10 +921,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4021">
+          <caret line="1896" column="34" selection-start-line="1896" selection-start-column="34" selection-end-line="1896" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Train_4400-master/Newphase3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="-110">
+          <caret line="511" column="39" selection-start-line="511" selection-start-column="35" selection-end-line="511" selection-end-column="39" />
           <folding>
             <marker date="1461106367608" expanded="true" signature="5257:5338" placeholder="SELECT * FRO... CUSTOMER" />
             <marker date="1461106367608" expanded="true" signature="5468:5548" placeholder="SELECT * FRO... MANAGER" />
@@ -929,17 +946,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4021">
-          <caret line="1896" column="34" selection-start-line="1896" selection-start-column="34" selection-end-line="1896" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Kevin-Tasks/searchReservation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="346">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -949,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Kevin-Tasks/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
+        <state relative-caret-position="853">
           <caret line="62" column="60" selection-start-line="61" selection-start-column="8" selection-end-line="62" selection-end-column="60" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -971,28 +980,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="153" column="67" selection-start-line="153" selection-start-column="67" selection-end-line="153" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1461442143394" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
-            <marker date="1461442143394" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
-            <marker date="1461442143394" expanded="true" signature="9051:9072" placeholder="SELECT R FRO... PaymentInfo" />
-            <marker date="1461442143394" expanded="true" signature="9094:9115" placeholder="SELECT L FRO... Station" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Kevin-Tasks/viewTrainSchedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="76" column="88" selection-start-line="76" selection-start-column="88" selection-end-line="76" selection-end-column="88" />
+        <state relative-caret-position="-17">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <marker date="1461436509441" expanded="true" signature="1086:1145" placeholder="SELECT * FRO... Stop" />
             <marker date="1461436509441" expanded="true" signature="1086:1182" placeholder="SELECT * FRO... Stop" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="221" column="71" selection-start-line="221" selection-start-column="71" selection-end-line="221" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461446587579" expanded="true" signature="2551:2558" placeholder="select * fro... TrainNumber" />
+            <marker date="1461446587579" expanded="true" signature="2551:3182" placeholder="select Train... TrainRoute" />
+            <marker date="1461446587579" expanded="true" signature="8110:8699" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="8110:8724" placeholder="select Conca... " />
+            <marker date="1461446587579" expanded="true" signature="9007:9066" placeholder="select 2ndCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="9305:9364" placeholder="select 1stCl... Train" />
+            <marker date="1461446587579" expanded="true" signature="12570:12591" placeholder="SELECT R FRO... PaymentInfo" />
+            <marker date="1461446587579" expanded="true" signature="12613:12634" placeholder="SELECT L FRO... Station" />
           </folding>
         </state>
       </provider>
