@@ -167,7 +167,7 @@ class GUI:
 
     def makeReservation(self):
         self.passengerInfoWin = Toplevel()
-        self.passengerInfoWin.withdraw()
+        self.passengerInfoWin.deiconify()
         self.reservationWin = Toplevel()
         self.reservationWin.title("Make Reservation")
 
@@ -180,7 +180,7 @@ class GUI:
         frame4 = Frame(self.reservationWin)
         frame4.pack(side=TOP)
         frame5 = Frame(self.reservationWin)
-        frame5.pack(side=BOTTOM)
+        frame5.pack(side=TOP)
 
         selected = Label(frame, text="Currently Selected")
         selected.grid(row=1,column=0)
@@ -199,17 +199,17 @@ class GUI:
         cursor = db.cursor()
         cursor.execute(sql)
         self.dVar = cursor.fetchall()[0]
-        cursor.close()
+        self.classVar=StringVar()
 
         if not self.Price1.get():
-            classVar = "2nd Class"
+            self.classVar = "2nd Class"
             sql="select 2ndClassPrice From TrainRoute where TrainNumber='%s'" % (self.train.get())
             db = self.connect()
             cursor=db.cursor()
             cursor.execute(sql)
             pr = [pri[0] for pri in cursor.fetchall()]
         else:
-            classVar = "1st Class"
+            self.classVar = "1st Class"
             sql="select 1stClassPrice From TrainRoute where TrainNumber='%s'" % (self.train.get())
             db = self.connect()
             cursor=db.cursor()
@@ -222,7 +222,7 @@ class GUI:
         Label(frame, text=self.dVar).grid(row=3,column=2,sticky="nsew")
         Label(frame, text=departsFrom).grid(row=3,column=3,sticky="nsew")
         Label(frame, text=arrivesAt).grid(row=3,column=4,sticky="nsew")
-        Label(frame, text=classVar).grid(row=3,column=5,sticky="nsew")
+        Label(frame, text=self.classVar).grid(row=3,column=5,sticky="nsew")
         Label(frame, text=pr).grid(row=3,column=6,sticky="nsew")
         Label(frame, text=self.bags.get()).grid(row=3,column=7,sticky="nsew")
         Label(frame, text=self.name.get()).grid(row=3,column=8,sticky="nsew")
@@ -235,6 +235,79 @@ class GUI:
         Label(frame, text="Price", font=("Calibri", 12, "bold")).grid(row=2, column=6, sticky='nsew')
         Label(frame, text="#of Baggages", font=("Calibri", 12, "bold")).grid(row=2, column=7, sticky='nsew')
         Label(frame, text="Passenger Name", font=("Calibri", 12, "bold")).grid(row=2, column=8, sticky='nsew')
+        Button(frame, text="Remove").grid(row=3,column=9,sticky='nsew')#,command=cancelRes)
+
+        stuDis = Label(frame2, text="Student Discount Applied:", font=("Calibri",12,"bold"))
+        stuDis.pack(side=LEFT)
+        username = "kberman"
+        sql = "select IsStudent from Customer where username = '%s'" % username
+        cursor.execute(sql)
+        if not cursor.fetchall():
+            stu = 'No'
+        else:
+            stu = 'Yes'
+        st = Label(frame2, text = stu)
+        st.pack(side=RIGHT)
+
+        totalC = Label(frame3, text="Total Cost:", font=("Calibri",12,"bold"))
+        totalC.pack(side=LEFT)
+        bagCost = 0;
+        if int(self.bags.get())>2:
+            bagCost = (int(self.bags.get())-2)*30
+        if not cursor.fetchall():
+            tcNum = bagCost+int(pr[0])
+        else:
+            tcNum = (bagCost+int(pr[0]))*0.8
+        tc = Label(frame3,text=tcNum)
+        tc.pack(side=RIGHT)
+
+        useC = Label(frame4,text = "Use Card:", font = ("Calibri",12,"bold"))
+        useC.pack(side=LEFT)
+        db = self.connect()
+        cursor = db.cursor()
+        query = "SELECT RIGHT(CardNumber,4) FROM PaymentInfo WHERE Username='Mark_Berman'"
+        cursor.execute(query)
+        cards = [card[0] for card in cursor.fetchall()]  # get cards from database
+        self.useCard = StringVar()
+        pulldownDC = OptionMenu(frame4, self.useCard, *cards)
+        pulldownDC.pack(side=RIGHT)
+
+        Button(frame5,text='Submit',command = self.submitRes).pack(side=RIGHT)#,command = self.submitRes())
+
+    def submitRes(self):
+        self.submitResWin = Toplevel()
+        self.reservationWin.withdraw()
+        self.submitResWin.deiconify()
+        self.submitResWin.title("Confomation")
+        sql = "select count(ReservationID) from Reserves"
+        db = self.connect()
+        cursor = db.cursor()
+        cursor.execute(sql)
+        resID = cursor.fetchall()[0]
+        departsFrom = self.departsFrom.get()
+        departsFrom = departsFrom[departsFrom.index("(") + 1:departsFrom.rindex(")")]
+        arrivesAt = self.arrivesAt.get()
+        arrivesAt = arrivesAt[arrivesAt.index("(") + 1:arrivesAt.rindex(")")]
+        sql = "INSERT INTO Reserves (ReservationID,TrainNumber,Class,DepartureDate,PassengerName,NumBags,DepartsFrom,ArrivesAt)\
+                VALUES\
+                (%i,'%s','%s','%s','%s',%i,'%s','%s');" % (int(resID[0])+1,self.train.get(),self.classVar,self.departDatesv.get(),self.name.get(),int(self.bags.get()),departsFrom,arrivesAt)
+        cursor.execute(sql)
+
+        sql = "Select CardNumber from PaymentInfo where RIGHT(CardNumber,4) ='%s';" % self.useCard.get()
+        cursor.execute(sql)
+        wholeCard = cursor.fetchall()[0]
+
+        sql = "INSERT INTO Reservation (ReservationID,CardNumber,Username)\
+                VALUES\
+                (%i,'%s','Mark_Berman');" % (int(resID[0])+1,wholeCard[0])
+        cursor.execute(sql)
+
+        frame = Frame(self.submitResWin)
+        frame.pack(side=TOP)
+        Label(frame,text='Reservation ID is:',font = ("Calibri",12,"bold")).grid(row=0,column=0,padx=10)
+        Label(frame,text='%s'%str(int(resID[0])+1),font=("Calibri",12,"bold")).grid(row=0,column=1,padx=10)
+
+
 
     def departTree(self, frame):
         tree = Treeview(frame, selectmode='browse')
