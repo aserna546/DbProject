@@ -297,9 +297,9 @@ class GUI:
         cursor.execute(sql)
         wholeCard = cursor.fetchall()[0]
 
-        sql = "INSERT INTO Reservation (ReservationID,CardNumber,Username)\
+        sql = "INSERT INTO Reservation (ReservationID,isCancelled,CardNumber,Username)\
                 VALUES\
-                (%i,'%s','Mark_Berman');" % (int(resID[0])+1,wholeCard[0])
+                (%i, 0,'%s','Mark_Berman');" % (int(resID[0])+1,wholeCard[0])
         cursor.execute(sql)
 
         frame = Frame(self.submitResWin)
