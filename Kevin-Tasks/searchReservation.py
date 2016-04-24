@@ -12,6 +12,12 @@ class GUI:
         self.updateWin = updateWin
         self.updateWin.title("Update Reservation")
 
+        self.updateWin2 = Toplevel()
+        self.updateWin2.withdraw()
+
+        self.updateWin3 = Toplevel()
+        self.updateWin3.withdraw()
+
         frame = Frame(self.updateWin)
         frame.pack()
         self.resIDUpdate = StringVar()
@@ -27,7 +33,7 @@ class GUI:
 
     def updateReservation2(self):
         self.updateWin.withdraw()
-        self.updateWin2 = Toplevel()
+        self.updateWin2.deiconify()
         self.updateWin2.title("Select Reservation")
         frame1 = Frame(self.updateWin2)
         frame1.pack()
@@ -86,7 +92,7 @@ class GUI:
 
     def upDateRes3(self):
         self.updateWin2.withdraw()
-        self.updateWin3 = Toplevel()
+        self.updateWin3.deiconify()
         self.updateWin3.title('Update Reservation 3')
         frame1 = Frame(self.updateWin3)
         frame1.pack(side=TOP)

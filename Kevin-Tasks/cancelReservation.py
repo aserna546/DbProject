@@ -12,6 +12,9 @@ class GUI:
         self.cancelWin = cancelWin
         self.cancelWin.title("Cancel Reservation")
 
+        self.cancelWin2 = Toplevel()
+        self.cancelWin2.withdraw()
+
         frame = Frame(self.cancelWin)
         frame.pack()
         self.resIDCancel = StringVar()
@@ -27,7 +30,7 @@ class GUI:
 
     def cancelRes2(self):
         self.cancelWin.withdraw()
-        self.cancelWin2 = Toplevel()
+        self.cancelWin2.deiconify()
         self.cancelWin2.title("Cancel Reservation 2")
         frame1 = Frame(self.cancelWin2)
         frame1.pack()
