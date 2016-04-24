@@ -15,6 +15,8 @@ class GUI:
         #pic = Label(self.rootWinSearch, image=self.image)
         #pic.grid(row=0, column=0, columnspan=2, padx=5, pady=5, sticky=W)
 
+        self.allReservation = [()]
+
         s = Label(self.rootWinSearch, text="Search Train", font=("Calibri", 15, "bold"))#, fg="gold")
         s.grid(row=1, column=0, columnspan=2, pady=5)
 
@@ -166,8 +168,6 @@ class GUI:
         b2.pack(side=RIGHT)
 
     def makeReservation(self):
-        self.passengerInfoWin = Toplevel()
-        self.passengerInfoWin.deiconify()
         self.reservationWin = Toplevel()
         self.reservationWin.title("Make Reservation")
 
@@ -215,6 +215,13 @@ class GUI:
             cursor=db.cursor()
             cursor.execute(sql)
             pr = [pri[0] for pri in cursor.fetchall()]
+        #sqlRes = Max
+        #cursor.execute(sqlRes)
+        if not cursor.fetchall():
+            self.allReservation = [(self.train.get(),self.departDatesv.get(),self.dVar,departsFrom,arrivesAt,self.classVar,pr,self.bags.get(),self.name.get()),0]
+        else:
+            self.allReservation = self.allReservation + [(self.train.get(), self.departDatesv.get(), self.dVar, departsFrom, arrivesAt, self.classVar, pr, self.bags.get(), self.name.get(),0)]
+
         #selectVal = [self.train.get(),self.departDatesv.get(),self.dVar.get(),departsFrom,arrivesAt, classVar,pr,self.bags.get(),self.name.get()]
         # selectVal = [,arrivesAt, classVar,pr,self.bags.get(),self.name.get()]
         Label(frame, text=self.train.get()).grid(row=3,column=0,sticky="nsew")
@@ -251,14 +258,20 @@ class GUI:
 
         totalC = Label(frame3, text="Total Cost:", font=("Calibri",12,"bold"))
         totalC.pack(side=LEFT)
-        bagCost = 0;
-        if int(self.bags.get())>2:
-            bagCost = (int(self.bags.get())-2)*30
-        if not cursor.fetchall():
-            tcNum = bagCost+int(pr[0])
-        else:
-            tcNum = (bagCost+int(pr[0]))*0.8
-        tc = Label(frame3,text=tcNum)
+        bagCost = 0
+        self.tcNum=0
+        print(self.allReservation)
+        for result in (self.allReservation):
+            print(result)
+            if int(result[7])>2:
+                bagCost = bagCost+(int(result[7])-2)*30
+            if not cursor.fetchall():
+                self.tcNum = self.tcNum+bagCost+int(result[6][0])
+                self.result[9] = bagCost+int(result[6][0])
+            else:
+                self.tcNum = self.tcNum+(bagCost+int(result[6][0]))*0.8
+                self.result[9] = (bagCost+int(result[6][0]))*0.8
+        tc = Label(frame3,text=self.tcNum)
         tc.pack(side=RIGHT)
 
         useC = Label(frame4,text = "Use Card:", font = ("Calibri",12,"bold"))
@@ -272,8 +285,12 @@ class GUI:
         pulldownDC = OptionMenu(frame4, self.useCard, *cards)
         pulldownDC.pack(side=RIGHT)
 
-        Button(frame5,text='Submit',command = self.submitRes).pack(side=RIGHT)#,command = self.submitRes())
+        Button(frame5,text='Submit',command = self.submitRes).pack(side=RIGHT)
+        Button(frame5,text='Add a Ticket',command=self.goBackToIntialWin).pack(side=LEFT)
 
+    def goBackToIntialWin(self):
+        self.reservationWin.withdraw()
+        self.rootWinSearch.deiconify()
     def submitRes(self):
         self.submitResWin = Toplevel()
         self.reservationWin.withdraw()
@@ -288,19 +305,20 @@ class GUI:
         departsFrom = departsFrom[departsFrom.index("(") + 1:departsFrom.rindex(")")]
         arrivesAt = self.arrivesAt.get()
         arrivesAt = arrivesAt[arrivesAt.index("(") + 1:arrivesAt.rindex(")")]
-        sql = "INSERT INTO Reserves (ReservationID,TrainNumber,Class,DepartureDate,PassengerName,NumBags,DepartsFrom,ArrivesAt)\
-                VALUES\
-                (%i,'%s','%s','%s','%s',%i,'%s','%s');" % (int(resID[0])+1,self.train.get(),self.classVar,self.departDatesv.get(),self.name.get(),int(self.bags.get()),departsFrom,arrivesAt)
-        cursor.execute(sql)
+        for result in (self.allReservation):
+            sql = "INSERT INTO Reserves (ReservationID,TrainNumber,Class,DepartureDate,PassengerName,NumBags,DepartsFrom,ArrivesAt,TicketPrice)\
+                    VALUES\
+                    (%i,'%s','%s','%s','%s',%i,'%s','%s',%i);" % (int(resID[0])+1,result[0],result[5],result[1],result[8],int(result[7]),result[3],result[4])
+            cursor.execute(sql)
 
-        sql = "Select CardNumber from PaymentInfo where RIGHT(CardNumber,4) ='%s';" % self.useCard.get()
-        cursor.execute(sql)
-        wholeCard = cursor.fetchall()[0]
+            sql = "Select CardNumber from PaymentInfo where RIGHT(CardNumber,4) ='%s';" % self.useCard.get()
+            cursor.execute(sql)
+            wholeCard = cursor.fetchall()[0]
 
-        sql = "INSERT INTO Reservation (ReservationID,isCancelled,CardNumber,Username)\
-                VALUES\
-                (%i, 0,'%s','Mark_Berman');" % (int(resID[0])+1,wholeCard[0])
-        cursor.execute(sql)
+            sql = "INSERT INTO Reservation (ReservationID,isCancelled,CardNumber,Username)\
+                    VALUES\
+                    (%i, 0,'%s','Mark_Berman');" % (int(resID[0])+1,wholeCard[0])
+            cursor.execute(sql)
 
         frame = Frame(self.submitResWin)
         frame.pack(side=TOP)
