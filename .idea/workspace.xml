@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9022942-6991-4aa6-b4fb-40ab1facb538" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/ExamplesToHelp/Somonelse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/ExamplesToHelp/treeViewAnother.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/ExamplesToHelp/treeViewExample.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/ExamplesToHelp/viewTrainSchedule.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/Login.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/makeReservation.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/review.py" />
+    <list default="true" id="c9022942-6991-4aa6-b4fb-40ab1facb538" name="Default" comment="final product so everyone can see">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/cancelReseveration.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/isStudent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/payMentInfoAdd.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/reportFinal.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Product/upDateReservation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final Product/Login.py" afterPath="$PROJECT_DIR$/Final Product/Login.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final Product/makeReservation.py" afterPath="$PROJECT_DIR$/Final Product/makeReservation.py" />
     </list>
     <ignored path="DbProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,26 +46,126 @@
       <file leaf-file-name="Login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final Product/Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="291" selection-end-column="13" />
+            <state relative-caret-position="4620">
+              <caret line="308" column="13" selection-start-line="308" selection-start-column="13" selection-end-line="308" selection-end-column="13" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1461524743000" expanded="true" signature="3130:3206" placeholder="SELECT * FRO... User" />
-                <marker date="1461524743000" expanded="true" signature="3279:3329" placeholder="SELECT Usern... Customer" />
-                <marker date="1461524743000" expanded="true" signature="3818:3865" placeholder="SELECT Usern... User" />
-                <marker date="1461524743000" expanded="true" signature="4528:4606" placeholder="INSERT INTO User... " />
-                <marker date="1461524743000" expanded="true" signature="4674:4770" placeholder="INSERT INTO Customer... " />
-                <marker date="1461524743000" expanded="true" signature="8233:8329" placeholder="SELECT * FRO... Stop" />
+                <marker date="1461536973000" expanded="true" signature="3587:3663" placeholder="SELECT * FRO... User" />
+                <marker date="1461536973000" expanded="true" signature="3736:3786" placeholder="SELECT Usern... Customer" />
+                <marker date="1461536973000" expanded="true" signature="4492:4539" placeholder="SELECT Usern... User" />
+                <marker date="1461536973000" expanded="true" signature="5202:5280" placeholder="INSERT INTO User... " />
+                <marker date="1461536973000" expanded="true" signature="5348:5444" placeholder="INSERT INTO Customer... " />
+                <marker date="1461536973000" expanded="true" signature="8907:9003" placeholder="SELECT * FRO... Stop" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reports.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Reports/Reports.py">
+      <file leaf-file-name="cancelReseveration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Product/cancelReseveration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1461537037000" expanded="true" signature="1239:1297" placeholder="Select IsCan... Reservation" />
+                <marker date="1461537037000" expanded="true" signature="1609:1661" placeholder="Select * Fro... ReservationView" />
+                <marker date="1461537037000" expanded="true" signature="4694:4747" placeholder="Select Ticke... Reserves" />
+                <marker date="1461537037000" expanded="true" signature="5739:5799" placeholder="SELECT min(D... Reserves" />
+                <marker date="1461537037000" expanded="true" signature="6982:7064" placeholder="UPDATE Reser... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upDateReservation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Product/upDateReservation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1461537118000" expanded="true" signature="1246:1298" placeholder="Select * Fro... ReservationView" />
+                <marker date="1461537118000" expanded="true" signature="5238:5307" placeholder="Select * Fro... ReservationView" />
+                <marker date="1461537118000" expanded="true" signature="8145:8214" placeholder="Select * Fro... ReservationView" />
+                <marker date="1461537118000" expanded="true" signature="11501:11583" placeholder="select Ticke... Reserves" />
+                <marker date="1461537118000" expanded="true" signature="12497:12597" placeholder="UPDATE Reser... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="makeReservation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Product/makeReservation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="198" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reportFinal.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Product/reportFinal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2610">
+              <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IsStudent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IsStudent/IsStudent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1461537765000" expanded="true" signature="1740:1816" placeholder="UPDATE Custo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isStudent.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Final Product/isStudent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1461537850000" expanded="true" signature="1740:1816" placeholder="UPDATE Custo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payMentInfoAdd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Final Product/payMentInfoAdd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1461537154000" expanded="true" signature="2517:2580" placeholder="SELECT RIGHT... " />
+                <marker date="1461537154000" expanded="true" signature="4104:4233" placeholder="INSERT INTO PaymentInfo... " />
+                <marker date="1461537154000" expanded="true" signature="4563:4618" placeholder="DELETE FROM " />
+                <marker date="1461537154000" expanded="true" signature="4665:5518" placeholder="Select CardN... CardNumber" />
+                <marker date="1461537154000" expanded="true" signature="4698:5441" placeholder="Select CardN... CardNumber" />
+                <marker date="1461537154000" expanded="true" signature="4798:5389" placeholder="Select CardN... Reserves" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reports.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reports/Reports.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -76,7 +176,7 @@
       <file leaf-file-name="review.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Final Product/review.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3195">
+            <state relative-caret-position="556">
               <caret line="213" column="187" selection-start-line="213" selection-start-column="187" selection-end-line="213" selection-end-column="187" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -114,6 +214,13 @@
         <option value="$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py" />
         <option value="$PROJECT_DIR$/Final Product/review.py" />
         <option value="$PROJECT_DIR$/Final Product/Login.py" />
+        <option value="$PROJECT_DIR$/Final Product/ExamplesToHelp/cancelReseveration.py" />
+        <option value="$PROJECT_DIR$/Final Product/cancelReseveration.py" />
+        <option value="$PROJECT_DIR$/Final Product/updateReservation.py" />
+        <option value="$PROJECT_DIR$/Final Product/payMentInfoAdd.py" />
+        <option value="$PROJECT_DIR$/Final Product/makeReservation.py" />
+        <option value="$PROJECT_DIR$/Final Product/reportFinal.py" />
+        <option value="$PROJECT_DIR$/Final Product/isStudent.py" />
       </list>
     </option>
   </component>
@@ -124,10 +231,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="41" />
+    <option name="x" value="-15" />
+    <option name="y" value="40" />
     <option name="width" value="1616" />
-    <option name="height" value="984" />
+    <option name="height" value="939" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -211,7 +318,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="IsStudent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DbProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DbProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Final Product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DbProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DbProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final Product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExamplesToHelp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,6 +370,117 @@
       <recent name="$PROJECT_DIR$/Final Product" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Reports/Reports.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/IsStudent/IsStudent.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Python.Login">
     <configuration default="false" name="SearchTrain" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -576,11 +826,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461522747603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final product so everyone can see">
+      <created>1461527960347</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461527960347</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="41" width="1616" height="984" extended-state="0" />
+    <frame x="-15" y="40" width="1616" height="939" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34591585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -588,7 +845,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.345977" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -644,55 +901,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CS4400-master/master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3930">
-          <caret line="269" column="37" selection-start-line="269" selection-start-column="37" selection-end-line="269" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" column="18" selection-start-line="111" selection-start-column="4" selection-end-line="116" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/viewTrainSchedule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/searchReservation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/cancelReservation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/SearchTrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kevin-Tasks/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GT-Train-master/GUI/LogInPage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12510">
@@ -917,13 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final Product/makeReservation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Reviews/Review.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -938,9 +1139,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Reports/Reports.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/ExamplesToHelp/cancelReseveration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/Login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4620">
+          <caret line="308" column="13" selection-start-line="308" selection-start-column="13" selection-end-line="308" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1461536973000" expanded="true" signature="3587:3663" placeholder="SELECT * FRO... User" />
+            <marker date="1461536973000" expanded="true" signature="3736:3786" placeholder="SELECT Usern... Customer" />
+            <marker date="1461536973000" expanded="true" signature="4492:4539" placeholder="SELECT Usern... User" />
+            <marker date="1461536973000" expanded="true" signature="5202:5280" placeholder="INSERT INTO User... " />
+            <marker date="1461536973000" expanded="true" signature="5348:5444" placeholder="INSERT INTO Customer... " />
+            <marker date="1461536973000" expanded="true" signature="8907:9003" placeholder="SELECT * FRO... Stop" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/cancelReseveration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461537037000" expanded="true" signature="1239:1297" placeholder="Select IsCan... Reservation" />
+            <marker date="1461537037000" expanded="true" signature="1609:1661" placeholder="Select * Fro... ReservationView" />
+            <marker date="1461537037000" expanded="true" signature="4694:4747" placeholder="Select Ticke... Reserves" />
+            <marker date="1461537037000" expanded="true" signature="5739:5799" placeholder="SELECT min(D... Reserves" />
+            <marker date="1461537037000" expanded="true" signature="6982:7064" placeholder="UPDATE Reser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Final Product/review.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3195">
+        <state relative-caret-position="556">
           <caret line="213" column="187" selection-start-line="213" selection-start-column="187" selection-end-line="213" selection-end-column="187" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -953,28 +1203,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final Product/Login.py">
+    <entry file="file://$PROJECT_DIR$/Final Product/payMentInfoAdd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="291" selection-end-column="13" />
+        <state relative-caret-position="2040">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1461524743000" expanded="true" signature="3130:3206" placeholder="SELECT * FRO... User" />
-            <marker date="1461524743000" expanded="true" signature="3279:3329" placeholder="SELECT Usern... Customer" />
-            <marker date="1461524743000" expanded="true" signature="3818:3865" placeholder="SELECT Usern... User" />
-            <marker date="1461524743000" expanded="true" signature="4528:4606" placeholder="INSERT INTO User... " />
-            <marker date="1461524743000" expanded="true" signature="4674:4770" placeholder="INSERT INTO Customer... " />
-            <marker date="1461524743000" expanded="true" signature="8233:8329" placeholder="SELECT * FRO... Stop" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461537154000" expanded="true" signature="2517:2580" placeholder="SELECT RIGHT... " />
+            <marker date="1461537154000" expanded="true" signature="4104:4233" placeholder="INSERT INTO PaymentInfo... " />
+            <marker date="1461537154000" expanded="true" signature="4563:4618" placeholder="DELETE FROM " />
+            <marker date="1461537154000" expanded="true" signature="4665:5518" placeholder="Select CardN... CardNumber" />
+            <marker date="1461537154000" expanded="true" signature="4698:5441" placeholder="Select CardN... CardNumber" />
+            <marker date="1461537154000" expanded="true" signature="4798:5389" placeholder="Select CardN... Reserves" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reports/Reports.py">
+    <entry file="file://$PROJECT_DIR$/Final Product/upDateReservation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="198" selection-end-column="14" />
+        <state relative-caret-position="1365">
+          <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461537118000" expanded="true" signature="1246:1298" placeholder="Select * Fro... ReservationView" />
+            <marker date="1461537118000" expanded="true" signature="5238:5307" placeholder="Select * Fro... ReservationView" />
+            <marker date="1461537118000" expanded="true" signature="8145:8214" placeholder="Select * Fro... ReservationView" />
+            <marker date="1461537118000" expanded="true" signature="11501:11583" placeholder="select Ticke... Reserves" />
+            <marker date="1461537118000" expanded="true" signature="12497:12597" placeholder="UPDATE Reser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/makeReservation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/reportFinal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IsStudent/IsStudent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461537765000" expanded="true" signature="1740:1816" placeholder="UPDATE Custo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Product/isStudent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1461537850000" expanded="true" signature="1740:1816" placeholder="UPDATE Custo... " />
           </folding>
         </state>
       </provider>

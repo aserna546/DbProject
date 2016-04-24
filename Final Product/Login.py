@@ -10,13 +10,15 @@ from tkinter import messagebox
 import re
 #import makeReservation
 import review
+import reportFinal
+import  makeReservation
 class Train:
 
     def __init__(self, window):
         self.usernameInput = StringVar()
         self.window = window
         self.loginScreen()
-        self.window.withdraw()
+        #self.window.withdraw()
         self.register = Toplevel()
         self.register.minsize(400,400)
         # Register page
@@ -29,8 +31,6 @@ class Train:
         self.mainPage()
         self.mainFrame.withdraw()
         #makeReservation.GUI()
-        self.reviewWindow = Toplevel()
-        review.GUI(self.reviewWindow, self.usernameInput)
 
 
     def loginScreen(self):
@@ -61,6 +61,15 @@ class Train:
                              db="cs4400_Team_39")
         return db
 
+
+    def gotoReviewsPage(self):
+        self.reviewWindow = Toplevel()
+        review.GUI(self.reviewWindow, self.usernameInput, self.mainFrame)
+        self.mainFrame.withdraw()
+
+    def gotoMakeReservation(self):
+        self.mainFrame.withdraw()
+        makeReservation.GUI(self.usernameInput)
     def mainPage(self):
         self.mainFrame.title("Home Page")
         labelF = Frame(self.mainFrame)
@@ -71,10 +80,13 @@ class Train:
         logout = Button(labelF, text="Log Out", fg='blue',
                             underline=1, command=self.goBackToLogin, font=("Arial", 10))
         giveReview = Button(labelF, text="Give Review", fg='blue',
-                            underline=1, command=self.TrainNumberSearch, font=("Arial", 10))
-        mainTitle.place(x=100, y=10)
+                            underline=1, command=self.gotoReviewsPage, font=("Arial", 10))
+        makeReservation = Button(labelF, text="Make Reservation", fg='blue',
+                            underline=1, command=self.gotoMakeReservation, font=("Arial", 10))
+        mainTitle.place(x=20, y=10)
         viewTrains.place(x=140, y=100)
         giveReview.place(x=140, y=150)
+        makeReservation.place(x=140, y=190)
         logout.place(x=140, y=300)
     def checkLogin(self):
         cursor = self.connect().cursor()
@@ -88,6 +100,11 @@ class Train:
             messagebox.showinfo("Success", "Login Successful")
             self.window.withdraw()
             self.mainFrame.deiconify()
+        elif validUser == 1:
+            messagebox.showinfo("Success", "Manager Login")
+            self.window.withdraw()
+            reportWindow = Toplevel()
+            reportFinal.GUI(reportWindow, self.window)
 
         else:
             messagebox.showerror("Error", "Username or password incorrect")
