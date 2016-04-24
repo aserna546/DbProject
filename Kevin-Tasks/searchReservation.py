@@ -28,7 +28,7 @@ class GUI:
     def updateReservation2(self):
         self.updateWin.withdraw()
         self.updateWin2 = Toplevel()
-        self.updateWin2.title("Update Reservation 2")
+        self.updateWin2.title("Select Reservation")
         frame1 = Frame(self.updateWin2)
         frame1.pack()
         frame2 = Frame(self.updateWin2)
@@ -51,6 +51,7 @@ class GUI:
         Label(frame1, text = "Number of Bags",font=("Calibri",12,"bold")).grid(row=1,column=4,padx = 30,pady=10,sticky='W')
         Label(frame1, text="Departs From", font=("Calibri", 12, "bold")).grid(row=1, column=5, padx=30, pady=10, sticky='W')
         Label(frame1, text="Arrives At", font=("Calibri", 12, "bold")).grid(row=1, column=6, padx=30, pady=10, sticky='W')
+        Label(frame1,text="Select",font=("Calibri",12,"bold")).grid(row=1,column=7,padx=30,pady=10)
         print(results)
         row = 1
         self.trainUpdate=StringVar()
@@ -156,7 +157,7 @@ class GUI:
         cursor.execute(sql)
         results = cursor.fetchall()
 
-        if datetime.strptime(self.newDate.get(),'%Y-%m-%d' ) >= results[0][3]:
+        if datetime.strptime(self.newDate.get(),'%Y-%m-%d' ) <= results[0][3]:
             messagebox.showerror(message="Error! Date Must be 1 Day in Advance of Departure Date")
         else:
             Label(frame4, text="Updated Train Ticket:", font=("Calibri", 12, "bold")).grid(row=0, column=0, padx=30, pady=10,sticky='W')
@@ -210,7 +211,7 @@ class GUI:
             Button(frame5,text="Back").grid(row=3,column=0,padx=30)
             Button(frame5,text = "Sumbit",command=self.submitUpdate).grid(row=3,column=1)
 
-    def sumbitUpdate(self):
+    def submitUpdate(self):
         messagebox.showerror(message="Your Ticket Has Been Updated")
         sql = "UPDATE Reserves SET DepartureDate='%s' WHERE ReservationID=%i and TrainNumber='%s'" % (self.newDate.get(),int(self.resIDUpdate.get()),self.trainUpdate.get())
         db = self.connect()
