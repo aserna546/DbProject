@@ -145,13 +145,14 @@ class PopularReport:
             input = Months[monthDepartureDate - 1]
             d[row] = [input, TrainNumber, countTrainNumber]
             row += 1
-            i = 0
+
+        month = ""
         for k in d:
-            if (i % 3 == 0):
-                tree.insert("", k, text="", values=(d[k][0], d[k][1], d[k][2]))
+            if d[k][0] == month:
+                d[k][0] = ""
             else:
-                tree.insert("", k, text="", values=("", d[k][1], d[k][2]))
-            i += 1;
+                month = d[k][0]
+            tree.insert("", k, text="", values=(d[k][0], d[k][1], d[k][2]))
         self.frame = Frame(self.master)
         self.quitButton = Button(self.frame, text='Back', width=25, command=self.close_windows)
         self.quitButton.pack()
