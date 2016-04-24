@@ -1,16 +1,13 @@
 from tkinter import *
 from tkinter.ttk import *
 import pymysql
-import urllib.request
-import base64
 from tkinter import messagebox
 import datetime
 
 class GUI:
-    def __init__(self, rootChoose):
-        self.rootChoose = Toplevel()
+    def __init__(self, window):
+        self.rootChoose = window
         self.rootChoose.title("Choose Report")
-        #self.rootWinCF.withdraw()
         self.rootChoose.minsize(400,300)
         pic = Label(self.rootChoose, text="Choose Functionality",font=("Calibri", 18, "bold"))
         pic.place(x = 85, y = 50)
@@ -26,13 +23,21 @@ class GUI:
         viewPopularRouteReport = Button(frame2, text="View Popular Report", width=20, command = self.goPopularReport)
         viewPopularRouteReport.pack()
 
+        bframe = Frame(self.rootChoose)
+        quitButton = Button(bframe, text='Logout')
+        quitButton.pack()
+        bframe.pack()
+        bframe.place(x=145, y=250)
+
     def goRevenueReport(self):
         self.newWindow = Toplevel(self.rootChoose)
-        self.app = RevenueReport(self.newWindow)
+        self.app = RevenueReport(self.newWindow,self.rootChoose)
+        self.rootChoose.withdraw()
 
     def goPopularReport(self):
         self.newWindow = Toplevel(self.rootChoose)
-        self.app = PopularReport(self.newWindow)
+        self.app = PopularReport(self.newWindow,self.rootChoose)
+        self.rootChoose.withdraw()
 
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
@@ -42,7 +47,8 @@ class GUI:
         return (db)
 
 class RevenueReport:
-    def __init__(self, master):
+    def __init__(self, master, main):
+        self.main = main
         self.master = master
         self.master.minsize(300,200)
 
@@ -102,7 +108,7 @@ class RevenueReport:
 
     def close_windows(self):
         self.master.destroy()
-
+        self.main.deiconify()
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
                              user="cs4400_Team_39",
@@ -111,7 +117,8 @@ class RevenueReport:
         return (db)
 
 class PopularReport:
-    def __init__(self, master):
+    def __init__(self, master, main):
+        self.main = main
         self.master = master
         self.master.minsize(400,300)
 
@@ -143,29 +150,34 @@ class PopularReport:
             r = messagebox.showerror("Error!", "Found No revenues to report!")
         row = 0
         d = {}
+        Months = ["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
         for TrainNumber, countTrainNumber, monthDepartureDate in (results):
-            month = datetime.date.today()
-            if monthDepartureDate == 2:
-                month = month + datetime.timedelta(1*365/12)
-            elif monthDepartureDate == 3:
-                month = month + datetime.timedelta(2*365 / 12)
-            input = ""
-            if month.month == 4:
-                input = "APRIL"
-            elif month.month == 5:
-                input = "MAY"
-            elif month.month == 6:
-                input = "JUNE"
-            elif month.month == 7:
-                input = "JULY"
+            input = Months[monthDepartureDate - 1]
             d[row] = [input, TrainNumber, countTrainNumber]
             row += 1
+        x = 0
+        y = 0
+        z = 0
         for k in d:
-            if k % 3 == 0:
-                tree.insert("", k, text="", values=(d[k][0], d[k][1], d[k][2]))
-            else:
-                tree.insert("", k, text="", values=("", d[k][1], d[k][2]))
-
+            print(str(d[k][0]) + str(d[k][1]) + str(d[k][2]) )
+            if d[k][0] == "JANUARY":
+                if (x == 0):
+                    tree.insert("", x, text="", values=(d[k][0], d[k][1], d[k][2]))
+                else:
+                    tree.insert("", x, text="", values=("", d[k][1], d[k][2]))
+                x += 1
+            elif d[k][0] == "FEBRUARY":
+                if (y == 0):
+                    tree.insert("", (6 + y), text="", values=(d[k][0], d[k][1], d[k][2]))
+                else:
+                    tree.insert("", (6 + y), text="", values=("",d[k][1], d[k][2]))
+                y += 1
+            elif d[k][0] == "MARCH":
+                if (z == 0):
+                    tree.insert("", (3 + z), text="", values=(d[k][0], d[k][1], d[k][2]))
+                else:
+                    tree.insert("", (3 + z), text="", values=("", d[k][1], d[k][2]))
+                z += 1
         self.frame = Frame(self.master)
         self.quitButton = Button(self.frame, text='Back', width=25, command=self.close_windows)
         self.quitButton.pack()
@@ -180,6 +192,7 @@ class PopularReport:
 
     def close_windows(self):
         self.master.destroy()
+        self.main.deiconify()
 
 win = Tk()
 app = GUI(win)
