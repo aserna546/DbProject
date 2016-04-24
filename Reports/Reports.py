@@ -81,20 +81,10 @@ class RevenueReport:
         row = 0
         d = {}
         for month, revenue in (results):
-            today = datetime.date.today()
-            if month == 2:
-                today = today + datetime.timedelta(1*365/12)
-            elif month == 3:
-                today = today + datetime.timedelta(2*365/12)
-            input = ""
-            if today.month == 4:
-                input = "APRIL"
-            elif today.month == 5:
-                input = "MAY"
-            elif today.month == 6:
-                input = "JUNE"
-            elif today.month == 7:
-                input = "JULY"
+            Months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER",
+                      "NOVEMBER", "DECEMBER"]
+
+            input = Months[month-1]
             d[row] = [input,revenue]
             row += 1
         for k in d:
@@ -155,29 +145,13 @@ class PopularReport:
             input = Months[monthDepartureDate - 1]
             d[row] = [input, TrainNumber, countTrainNumber]
             row += 1
-        x = 0
-        y = 0
-        z = 0
+            i = 0
         for k in d:
-            print(str(d[k][0]) + str(d[k][1]) + str(d[k][2]) )
-            if d[k][0] == "JANUARY":
-                if (x == 0):
-                    tree.insert("", x, text="", values=(d[k][0], d[k][1], d[k][2]))
-                else:
-                    tree.insert("", x, text="", values=("", d[k][1], d[k][2]))
-                x += 1
-            elif d[k][0] == "FEBRUARY":
-                if (y == 0):
-                    tree.insert("", (6 + y), text="", values=(d[k][0], d[k][1], d[k][2]))
-                else:
-                    tree.insert("", (6 + y), text="", values=("",d[k][1], d[k][2]))
-                y += 1
-            elif d[k][0] == "MARCH":
-                if (z == 0):
-                    tree.insert("", (3 + z), text="", values=(d[k][0], d[k][1], d[k][2]))
-                else:
-                    tree.insert("", (3 + z), text="", values=("", d[k][1], d[k][2]))
-                z += 1
+            if (i % 3 == 0):
+                tree.insert("", k, text="", values=(d[k][0], d[k][1], d[k][2]))
+            else:
+                tree.insert("", k, text="", values=("", d[k][1], d[k][2]))
+            i += 1;
         self.frame = Frame(self.master)
         self.quitButton = Button(self.frame, text='Back', width=25, command=self.close_windows)
         self.quitButton.pack()
