@@ -11,11 +11,11 @@ class GUI:
         pic = Label(self.rootChoose, font=("Helvetica",18), text="Choose Functionality")
         pic.place(x = 108, y = 50)
 
-        frame = Frame(self.rootChoose);
-        frame.pack();
+        frame = Frame(self.rootChoose)
+        frame.pack()
         frame.place(x = 85, y = 100)
-        frame2 = Frame(self.rootChoose);
-        frame2.pack();
+        frame2 = Frame(self.rootChoose)
+        frame2.pack()
         frame2.place(x = 85, y = 130)
         viewReview = Button(frame, text="View a Review", width=20, command = self.goViewReview)
         viewReview.pack()
@@ -99,37 +99,27 @@ class ShowReview:
         self.frame.pack()
 
         # sql = "SELECT * FROM Review;"
-        sql = "SELECT * FROM Review WHERE TrainNumber='" + reviewNum + "'"
+        sql = "SELECT Comment, Rating FROM Review WHERE TrainNumber='" + reviewNum + "'"
 
         db = self.connect()
         cursor = db.cursor()
         cursor.execute(sql)
         results = cursor.fetchall()
-        verygood = ""
-        good = ""
-        neutral = ""
-        bad = ""
-        verybad = ""
         if not results:
             r = messagebox.showerror("Error!", "Found No Reviews found")
-
-        for ReviewNum, Comment, Rating, TrainNumber, Username in (results):
+        row = 0
+        for comment, Rating in (results):
             if Rating == "Very Good":
-                verygood += Comment + ", "
+                tree.insert("", row, text="", values=("VERY GOOD", comment))
             if Rating == "Good":
-                good +=  Comment + ", "
+                tree.insert("", row, text="", values=("GOOD", comment))
             if Rating == "Neutral":
-                neutral += Comment + ", "
+                tree.insert("", row, text="", values=("NEUTRAL", comment))
             if Rating == "Bad":
-                bad += Comment + ", "
+                tree.insert("", row, text="", values=("BAD", comment))
             if Rating == "Very Bad":
-                verybad += Comment + ", "
-
-        tree.insert("", 0, text="", values=("VERY GOOD", verygood ))
-        tree.insert("", 1, text="", values=("GOOD", good))
-        tree.insert("", 2, text="", values=("NEUTRAL", neutral))
-        tree.insert("", 3, text="", values=("BAD", bad))
-        tree.insert("", 4, text="", values=("VERY BAD", verybad))
+                tree.insert("", row, text="", values=("VERY BAD", comment))
+        row += 1
         tree.pack()
     def close_windows(self):
         self.master.destroy()
