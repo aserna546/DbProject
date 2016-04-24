@@ -89,6 +89,7 @@ class GUI:
         frame1.grid_rowconfigure(row + 1, weight=1)
         b=Button(frame2,text='Next',command =self.upDateRes3)
         b.pack(side=RIGHT)
+        Button(frame2,text='Back').pack(side=LEFT)
 
     def upDateRes3(self):
         self.updateWin2.withdraw()
@@ -214,7 +215,7 @@ class GUI:
             Label(frame5, text="Updated Total Cost:",font=("Calibri",12,"bold")).grid(row=1,column=0,padx=30,pady=10)
             Label(frame5,text=str(50)).grid(row=0,column=1,pady=10)
             #Label(frame5,text=("'%s'" % str(results[0][priceIndex] + 50))).grid(row=1,column=0,pady=10)
-            Button(frame5,text="Back").grid(row=3,column=0,padx=30)
+            Button(frame5,text="Back",command = self.updateReservation2).grid(row=3,column=0,padx=30)
             Button(frame5,text = "Sumbit",command=self.submitUpdate).grid(row=3,column=1)
 
     def submitUpdate(self):
