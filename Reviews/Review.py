@@ -5,7 +5,7 @@ from tkinter import messagebox
 
 class GUI:
     def __init__(self, rootChoose):
-        self.rootChoose = Toplevel()
+        self.rootChoose = rootChoose
         self.rootChoose.title("Choose Report")
         self.rootChoose.minsize(400,300)
         pic = Label(self.rootChoose, font=("Helvetica",18), text="Choose Functionality")
@@ -23,13 +23,21 @@ class GUI:
         WriteReview = Button(frame2, text="Write a Review", width=20, command = self.goWriteReview)
         WriteReview.pack()
 
+        bframe = Frame(self.rootChoose)
+        quitButton = Button(bframe, text='Back')
+        quitButton.pack()
+        bframe.pack()
+        bframe.place(x=145, y=250)
+
     def goWriteReview(self):
         self.newWindow = Toplevel(self.rootChoose)
-        self.app = WriteReview(self.newWindow)
+        self.app = WriteReview(self.newWindow, self.rootChoose)
+        self.rootChoose.withdraw()
 
     def goViewReview(self):
         self.newWindow = Toplevel(self.rootChoose)
-        self.app = ViewReview(self.newWindow)
+        self.app = ViewReview(self.newWindow, self.rootChoose)
+        self.rootChoose.withdraw()
 
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
@@ -39,7 +47,8 @@ class GUI:
         return (db)
 
 class ViewReview:
-    def __init__(self, master):
+    def __init__(self, master, main):
+        self.main = main
         self.master = master
         self.master.minsize(400,300)
         pic = Label(self.master, font=("Helvetica",18), text="View Review")
@@ -67,12 +76,15 @@ class ViewReview:
 
     def loadReviews(self):
         self.newWindow = Toplevel(self.master)
-        self.app = ShowReview(self.newWindow, self.routenumEntry.get())
+        self.app = ShowReview(self.newWindow, self.routenumEntry.get(), self.master)
+        self.master.withdraw()
     def close_windows(self):
         self.master.destroy()
+        self.main.deiconify()
 
 class ShowReview:
-    def __init__(self, master, input):
+    def __init__(self, master, input, main):
+        self.main = main
         self.master = master
         self.master.minsize(400,300)
         labelframe = Frame(master)
@@ -88,7 +100,7 @@ class ShowReview:
         tree["columns"] = ("Rating", "Comment")
         tree.column("#0", width=0,minwidth=0)
         tree.column("Rating", width=100)
-        tree.column("Comment", width=200)
+        tree.column("Comment", width=270)
         tree.heading("Rating", text="Rating")
         tree.heading("Comment", text="Comment")
 
@@ -123,6 +135,7 @@ class ShowReview:
         tree.pack()
     def close_windows(self):
         self.master.destroy()
+        self.main.deiconify()
 
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
@@ -132,7 +145,8 @@ class ShowReview:
         return (db)
 
 class WriteReview:
-    def __init__(self, master):
+    def __init__(self, master, main):
+        self.main = main
         self.master = master
         self.master.minsize(400,300)
         self.frame = Frame(self.master)
@@ -176,6 +190,7 @@ class WriteReview:
 
     def close_windows(self):
         self.master.destroy()
+        self.main.deiconify()
 
     def submit(self):
 
@@ -201,6 +216,7 @@ class WriteReview:
             cursor.execute(sql)
             results = cursor.fetchall()
         self.master.destroy()
+        self.main.deiconify()
 
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
