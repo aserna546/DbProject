@@ -55,7 +55,7 @@ class GUI:
                 db = self.connect()
                 cursor = db.cursor()
                 cursor.execute(sql)
-                r = messagebox.showerror("Success!", "You are now Registered as as student in out system")
+                r = messagebox.showerror("Success!", "You are now registered as student in our system")
             else:
                 r = messagebox.showerror("Error!", "Your Email does not have the .edu domain")
         else:
