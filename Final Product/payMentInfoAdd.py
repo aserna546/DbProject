@@ -67,6 +67,9 @@ class GUI:
         cn2 = Label(self.rootWin, text="Card Number")
         cn2.grid(row=4, column=2, padx=30, sticky=W)
 
+        submit3 = Button(self.rootWin, text="Back", command=self.back)
+        submit3.grid(row=8, column=3, columnspan=2, pady=20)
+        
         db = self.connect()
         cursor = db.cursor()
         cantdelete = "Select CardNumber,UserName From (Select CardNumber,UserName,ReservationID,Max(DD) " \
@@ -87,9 +90,6 @@ class GUI:
 
         submit2 = Button(self.rootWin, text="Delete", command=self.deleteCard)
         submit2.grid(row=8, column=2, columnspan=2, pady=20)
-
-        submit3 = Button(self.rootWin, text="Back", command=self.back)
-        submit3.grid(row=8, column=4, columnspan=2, pady=20)
 
     def back(self):
         self.func()
