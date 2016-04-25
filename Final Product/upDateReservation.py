@@ -7,7 +7,7 @@ from datetime import datetime
 
 class GUI:
 
-    def __init__(self, updateWin, mainPage, userName):
+    def __init__(self, updateWin, mainPage):
         #self.primaryWindow.withdraw()
         self.mainPage = mainPage
         self.updateWin = updateWin
@@ -27,8 +27,12 @@ class GUI:
         e1.grid(row=0, column=1)
         b1 = Button(frame, text="Search", command=self.updateReservation2)
         b1.grid(row=0, column=2, sticky=E)
-        b2 = Button(frame, text="Back")
+        b2 = Button(frame, text="Back", command=self.gobacktoMain)
         b2.grid(row=1, column=1, sticky=E)
+
+    def gobacktoMain(self):
+        self.updateWin.destroy()
+        self.mainPage.deiconify()
 
     def goBackToSelction(self):
         self.updateWin3.destroy()
@@ -249,4 +253,3 @@ class GUI:
                              passwd="HSaWNuO5",
                              db="cs4400_Team_39")
         return (db)
-
