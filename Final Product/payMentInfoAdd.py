@@ -88,6 +88,13 @@ class GUI:
         submit2 = Button(self.rootWin, text="Delete", command=self.deleteCard)
         submit2.grid(row=8, column=2, columnspan=2, pady=20)
 
+        submit3 = Button(self.rootWin, text="Back", command=self.back)
+        submit3.grid(row=8, column=4, columnspan=2, pady=20)
+
+    def back(self):
+        self.func()
+        self.rootWin.destroy()
+
     def addCard(self):
         expDate = datetime.date.today()
         server = self.connect()
@@ -120,7 +127,9 @@ class GUI:
     def deleteCard(self):
         db = self.connect()
         cursor = db.cursor()
-        query = "DELETE FROM PaymentInfo WHERE RIGHT(CardNumber,4) ='%s'" % (self.delCard.get())
+        print(self.delCard.get())
+        query = "DELETE FROM PaymentInfo WHERE ='%s'" % (self.delCard.get())
+        #query = "DELETE FROM PaymentInfo WHERE RIGHT(CardNumber,4) ='%s'" % (self.delCard.get())
 
         cursor.execute(query)
         messagebox.showinfo("Deleted Card", "You Deleted a card")
