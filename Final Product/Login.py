@@ -4,14 +4,15 @@ from tkinter import *
 import urllib.request
 import datetime
 import pymysql
-import time
-import csv
 from tkinter import messagebox
 import re
-#import makeReservation
+
 import review
 import reportFinal
-import  makeReservation
+import makeReservation
+import upDateReservation
+import cancelReservation
+import isStudentInfo
 class Train:
 
     def __init__(self, window):
@@ -61,15 +62,30 @@ class Train:
                              db="cs4400_Team_39")
         return db
 
+    def gotoCancelReservation(self):
+        cancelPage = Toplevel()
+        self.mainFrame.withdraw()
+        cancelReservation.GUI(cancelPage, self.mainFrame)
+
 
     def gotoReviewsPage(self):
-        self.reviewWindow = Toplevel()
-        review.GUI(self.reviewWindow, self.usernameInput, self.mainFrame)
+        reviewWindow = Toplevel()
+        review.GUI(reviewWindow, self.usernameInput, self.mainFrame)
         self.mainFrame.withdraw()
 
     def gotoMakeReservation(self):
         self.mainFrame.withdraw()
         makeReservation.GUI(self.usernameInput)
+
+    def goupDateReservation(self):
+        self.mainFrame.withdraw()
+        updateReservationWin = Toplevel()
+        upDateReservation.GUI(updateReservationWin, self.mainFrame)
+
+    def goToAddSchool(self):
+        self.mainFrame.withdraw()
+        addSchoolWin = Toplevel()
+        isStudentInfo.GUI(addSchoolWin, self.usernameInput, self.mainFrame)
     def mainPage(self):
         self.mainFrame.title("Home Page")
         labelF = Frame(self.mainFrame)
@@ -83,11 +99,23 @@ class Train:
                             underline=1, command=self.gotoReviewsPage, font=("Arial", 10))
         makeReservation = Button(labelF, text="Make Reservation", fg='blue',
                             underline=1, command=self.gotoMakeReservation, font=("Arial", 10))
+        updaterev = Button(labelF, text="Update Reservation", fg='blue',
+                                 underline=1, command=self.goupDateReservation, font=("Arial", 10))
+        canelrev = Button(labelF, text="Cancel Reservation", fg='blue',
+                           underline=1, command=self.gotoCancelReservation, font=("Arial", 10))
+        addschool = Button(labelF, text="addSchool Info", fg='blue',
+                          underline=1, command=self.goToAddSchool, font=("Arial", 10))
+
         mainTitle.place(x=20, y=10)
         viewTrains.place(x=140, y=100)
         giveReview.place(x=140, y=150)
         makeReservation.place(x=140, y=190)
-        logout.place(x=140, y=300)
+        updaterev.place(x=140, y=230)
+        canelrev.place(x=140, y=270)
+        addschool.place(x=140, y=310)
+        logout.place(x=140, y=370)
+
+
     def checkLogin(self):
         cursor = self.connect().cursor()
         sql = "SELECT * FROM User WHERE Username = '%s' \

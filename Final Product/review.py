@@ -4,10 +4,11 @@ import pymysql
 from tkinter import messagebox
 
 class GUI:
-    def __init__(self, rootChoose, UsernameInput):
+    def __init__(self, rootChoose, UsernameInput, mainFrame):
         self.rootChoose = rootChoose
         self.rootChoose.title("Choose Report")
         self.rootChoose.minsize(400,300)
+        self.mainFrame = mainFrame
         pic = Label(self.rootChoose, font=("Helvetica",18), text="Choose Functionality")
         pic.place(x = 108, y = 50)
         self.UsernameInput = UsernameInput
@@ -24,11 +25,13 @@ class GUI:
         WriteReview.pack()
 
         bframe = Frame(self.rootChoose)
-        quitButton = Button(bframe, text='Back')
+        quitButton = Button(bframe, text='Back', command=self.goBackToMain)
         quitButton.pack()
         bframe.pack()
         bframe.place(x=145, y=250)
-
+    def goBackToMain(self):
+        self.mainFrame.deiconify()
+        self.rootChoose.destroy()
     def goWriteReview(self):
         self.newWindow = Toplevel(self.rootChoose)
         self.app = WriteReview(self.newWindow, self.rootChoose, self.UsernameInput)
@@ -195,15 +198,14 @@ class WriteReview:
 
     def submit(self):
 
-        sql = "SELECT COUNT(ReviewNum) FROM Review"
+        sql = "SELECT MAX(ReviewNum) FROM Review"
         db = self.connect()
         cursor = db.cursor()
         cursor.execute(sql)
         results = cursor.fetchall()
-        primaryKey = results[0][0] + 2
+        primaryKey = results[0][0] + 1
 
         sql = "SELECT * FROM TrainRoute WHERE TrainNumber = '" + self.train.get() + "'"
-
         db = self.connect()
         cursor = db.cursor()
         cursor.execute(sql)
@@ -225,4 +227,3 @@ class WriteReview:
                              passwd="HSaWNuO5",
                              db="cs4400_Team_39")
         return (db)
-

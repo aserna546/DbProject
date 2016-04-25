@@ -3,9 +3,10 @@ from tkinter import messagebox
 import pymysql
 
 class GUI:
-    def __init__(self, window, username):
-        self.username = username
+    def __init__(self, window, username, mainFrame):
+        self.username = username.get()
         self.rootwindow = window
+        self.mainFrame = mainFrame
         self.rootwindow.title("Add Student Email")
         self.rootwindow.minsize(400, 200)
 
@@ -42,6 +43,8 @@ class GUI:
 
     def close_window(self):
         print("CLOSE")
+        self.rootwindow.destroy()
+        self.mainFrame.deiconify()
 
     def submit(self):
         email = self.emailEntry.get()
@@ -56,6 +59,8 @@ class GUI:
                 cursor = db.cursor()
                 cursor.execute(sql)
                 r = messagebox.showerror("Success!", "You are now registered as student in our system")
+                self.rootwindow.destroy()
+                self.mainFrame.deiconify()
             else:
                 r = messagebox.showerror("Error!", "Your Email does not have the .edu domain")
         else:
@@ -67,7 +72,3 @@ class GUI:
                              passwd="HSaWNuO5",
                              db="cs4400_Team_39")
         return (db)
-
-win = Tk()
-app = GUI(win,"alejandro2")
-win.mainloop()

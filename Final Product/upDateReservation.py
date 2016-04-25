@@ -7,16 +7,15 @@ from datetime import datetime
 
 class GUI:
 
-    def __init__(self, updateWin):
+    def __init__(self, updateWin, mainPage, userName):
         #self.primaryWindow.withdraw()
+        self.mainPage = mainPage
         self.updateWin = updateWin
         self.updateWin.title("Update Reservation")
 
         self.updateWin2 = Toplevel()
         self.updateWin2.withdraw()
 
-        self.updateWin3 = Toplevel()
-        self.updateWin3.withdraw()
 
         frame = Frame(self.updateWin)
         frame.pack()
@@ -31,9 +30,15 @@ class GUI:
         b2 = Button(frame, text="Back")
         b2.grid(row=1, column=1, sticky=E)
 
+    def goBackToSelction(self):
+        self.updateWin3.destroy()
+        self.updateWin2.deiconify()
+    def goBackToId(self):
+        self.updateWin.deiconify()
+        self.updateWin2.destroy()
     def updateReservation2(self):
         self.updateWin.withdraw()
-        self.updateWin2.deiconify()
+        self.updateWin2 = Toplevel()
         self.updateWin2.title("Select Reservation")
         frame1 = Frame(self.updateWin2)
         frame1.pack()
@@ -93,11 +98,11 @@ class GUI:
         frame1.grid_rowconfigure(row + 1, weight=1)
         b=Button(frame2,text='Next',command =self.upDateRes3)
         b.pack(side=RIGHT)
-        Button(frame2,text='Back').pack(side=LEFT)
+        Button(frame2,text='Back', command=self.goBackToId).pack(side=LEFT)
 
     def upDateRes3(self):
         self.updateWin2.withdraw()
-        self.updateWin3.deiconify()
+        self.updateWin3 = Toplevel()
         self.updateWin3.title('Update Reservation 3')
         frame1 = Frame(self.updateWin3)
         frame1.pack(side=TOP)
@@ -227,7 +232,7 @@ class GUI:
             Label(frame5, text="Updated Total Cost:",font=("Calibri",12,"bold")).grid(row=1,column=0,padx=30,pady=10)
             Label(frame5,text=str(50)).grid(row=0,column=1,pady=10)
             Label(frame5,text=("'%s'" % str(self.price[0][0] + 50))).grid(row=1,column=1,pady=10)
-            Button(frame5,text="Back",command = self.updateReservation2).grid(row=3,column=0,padx=30)
+            Button(frame5,text="Back",command = self.goBackToSelction).grid(row=3,column=0,padx=30)
             Button(frame5,text = "Sumbit",command=self.submitUpdate).grid(row=3,column=1)
 
     def submitUpdate(self):
@@ -236,7 +241,8 @@ class GUI:
         db = self.connect()
         cursor=db.cursor()
         cursor.execute(sql)
-
+        self.updateWin3.destroy()
+        self.mainPage.deiconify()
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
                              user="cs4400_Team_39",
@@ -244,6 +250,3 @@ class GUI:
                              db="cs4400_Team_39")
         return (db)
 
-win = Tk()
-app = GUI(win)
-win.mainloop()

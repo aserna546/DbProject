@@ -7,14 +7,11 @@ from datetime import datetime,timedelta
 
 class GUI:
 
-    def __init__(self, cancelWin):
+    def __init__(self, cancelWin, mainFrame):
         #self.primaryWindow.withdraw()
         self.cancelWin = cancelWin
         self.cancelWin.title("Cancel Reservation")
-
-        self.cancelWin2 = Toplevel()
-        self.cancelWin2.withdraw()
-
+        self.mainFrame = mainFrame
         frame = Frame(self.cancelWin)
         frame.pack()
         self.resIDCancel = StringVar()
@@ -25,12 +22,15 @@ class GUI:
         e1.grid(row=0, column=1)
         b1 = Button(frame, text="Search", command=self.cancelRes2)
         b1.grid(row=0, column=2, sticky=E)
-        b2 = Button(frame, text="Back")
+        b2 = Button(frame, text="Back", command=self.goBackToMain)
         b2.grid(row=1, column=1, sticky=E)
 
+    def goBackToMain(self):
+        self.cancelWin.destroy()
+        self.mainFrame.deiconify()
     def cancelRes2(self):
         self.cancelWin.withdraw()
-        self.cancelWin2.deiconify()
+        self.cancelWin2 = Toplevel()
         self.cancelWin2.title("Cancel Reservation 2")
         frame1 = Frame(self.cancelWin2)
         frame1.pack()
@@ -45,7 +45,9 @@ class GUI:
         can = cursor.fetchall()
         print(can)
         if can[0][0]:
-            messagebox.showerror(message="You Cannot Cancel a Cancelled Reservation")
+            messagebox.showerror("Error", "You Cannot Cancel a Cancelled Reservation")
+            self.cancelWin2.destroy()
+            self.cancelWin.deiconify()
         else:
             sql = "Select * From ReservationView where ReservationID = %i" % int(self.resIDCancel.get())
             cursor.execute(sql)
@@ -107,7 +109,11 @@ class GUI:
 
             b=Button(frame2,text='Check Amount to be Refunded',command =self.cancelReservation)
             b.pack(side=RIGHT)
-            Button(frame2,text="Back").pack(side=LEFT)
+            Button(frame2,text="Back", command=self.goBackToEnterID).pack(side=LEFT)
+
+    def goBackToEnterID(self):
+        self.cancelWin2.destroy()
+        self.cancelWin.deiconify()
 
     def cancelReservation(self):
         frame1 = Frame(self.cancelWin2)
@@ -144,7 +150,9 @@ class GUI:
         db = self.connect()
         cursor=db.cursor()
         cursor.execute(sql)
-
+        self.cancelWin.destroy()
+        self.cancelWin2.destroy()
+        self.mainFrame.deiconify()
     def connect(self):
         db = pymysql.connect(host="academic-mysql.cc.gatech.edu",
                              user="cs4400_Team_39",
@@ -152,6 +160,3 @@ class GUI:
                              db="cs4400_Team_39")
         return (db)
 
-win = Tk()
-app = GUI(win)
-win.mainloop()
