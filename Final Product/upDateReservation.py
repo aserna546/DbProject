@@ -48,61 +48,70 @@ class GUI:
         frame1.pack()
         frame2 = Frame(self.updateWin2)
         frame2.pack(side=BOTTOM)
-        sql = "Select * From ReservationView where ReservationID = %i;" % int(self.resIDUpdate.get())
+        sql = "Select * From Reservation where ReservationID ='%i' && isCancelled='0'" % int(self.resIDUpdate.get())
         db = self.connect()
         cursor = db.cursor()
         cursor.execute(sql)
         results = cursor.fetchall()
-        print(results)
+        if not results:
+            r = messagebox.showerror("Error!", "Reservation Doesn't Exist or is Cancelled.")
+            self.updateWin.deiconify()
+        else:
+            sql = "Select * From ReservationView where ReservationID = %i" % int(self.resIDUpdate.get())
+            db = self.connect()
+            cursor = db.cursor()
+            cursor.execute(sql)
+            results = cursor.fetchall()
+            print(results)
 
-        self.widgets = {}
-        dc = Label(frame1, text="TrainNumber", font=("Calibri", 12, "bold"))
-        dc.grid(row=1, column=0, sticky='W')
-        Label(frame1,text= "Time",font=("Calibri",12,"bold")).grid(row=1,column=1,sticky='W')
-        dc2 = Label(frame1, text="Departs From", font=("Calibri", 12, "bold"))
-        dc2.grid(row=1, column=2, padx=30, pady=10, sticky='nsew')
-        dc3 = Label(frame1, text="Arrives At", font=("Calibri", 12, "bold"))
-        dc3.grid(row=1, column=3, padx=30, pady=10, sticky='W')
-        dc4 = Label(frame1, text="Class", font=("Calibri", 12, "bold"))
-        dc4.grid(row=1, column=4, padx=30, pady=10, sticky='W')
-        Label(frame1, text = "Price",font=("Calibri",12,"bold")).grid(row=1,column=5,padx = 30,pady=10,sticky='W')
-        Label(frame1, text="# of Bags", font=("Calibri", 12, "bold")).grid(row=1, column=6, padx=30, pady=10, sticky='W')
-        Label(frame1, text="Passenger Name", font=("Calibri", 12, "bold")).grid(row=1, column=7, padx=30, pady=10, sticky='W')
-        Label(frame1,text="Select",font=("Calibri",12,"bold")).grid(row=1,column=8,padx=30,pady=10)
-        print(results)
-        row = 1
-        self.trainUpdate=StringVar()
-        for Resd,TrainNum,ti,DepF, ArA, clv, p, nuB,PNa in (results):
+            self.widgets = {}
+            dc = Label(frame1, text="TrainNumber", font=("Calibri", 12, "bold"))
+            dc.grid(row=1, column=0, sticky='W')
+            Label(frame1,text= "Time",font=("Calibri",12,"bold")).grid(row=1,column=1,sticky='W')
+            dc2 = Label(frame1, text="Departs From", font=("Calibri", 12, "bold"))
+            dc2.grid(row=1, column=2, padx=30, pady=10, sticky='nsew')
+            dc3 = Label(frame1, text="Arrives At", font=("Calibri", 12, "bold"))
+            dc3.grid(row=1, column=3, padx=30, pady=10, sticky='W')
+            dc4 = Label(frame1, text="Class", font=("Calibri", 12, "bold"))
+            dc4.grid(row=1, column=4, padx=30, pady=10, sticky='W')
+            Label(frame1, text = "Price",font=("Calibri",12,"bold")).grid(row=1,column=5,padx = 30,pady=10,sticky='W')
+            Label(frame1, text="# of Bags", font=("Calibri", 12, "bold")).grid(row=1, column=6, padx=30, pady=10, sticky='W')
+            Label(frame1, text="Passenger Name", font=("Calibri", 12, "bold")).grid(row=1, column=7, padx=30, pady=10, sticky='W')
+            Label(frame1,text="Select",font=("Calibri",12,"bold")).grid(row=1,column=8,padx=30,pady=10)
+            print(results)
+            row = 1
+            self.trainUpdate=StringVar()
+            for Resd,TrainNum,ti,DepF, ArA, clv, p, nuB,PNa in (results):
 
-            row += 1
-            self.widgets[TrainNum] = {
-                "Train Number": Label(frame1, text=TrainNum),
-                "Time": Label(frame1,text=ti),
-                "Station": Label(frame1, text=DepF),
-                "Arrival Time": Label(frame1, text=ArA),
-                "Depart Time": Label(frame1, text=clv),
-                "Num B": Label(frame1,text=p),
-                "DepaF": Label(frame1,text = nuB),
-                "ArrA": Label(frame1,text = PNa)
-            }
+                row += 1
+                self.widgets[TrainNum] = {
+                    "Train Number": Label(frame1, text=TrainNum),
+                    "Time": Label(frame1,text=ti),
+                    "Station": Label(frame1, text=DepF),
+                    "Arrival Time": Label(frame1, text=ArA),
+                    "Depart Time": Label(frame1, text=clv),
+                    "Num B": Label(frame1,text=p),
+                    "DepaF": Label(frame1,text = nuB),
+                    "ArrA": Label(frame1,text = PNa)
+                }
 
-            self.widgets[TrainNum]["Train Number"].grid(row=row, column=0, sticky="nsew")
-            self.widgets[TrainNum]["Time"].grid(row=row,column=1,sticky="nsew")
-            self.widgets[TrainNum]["Station"].grid(row=row, column=2, sticky="nsew")
-            self.widgets[TrainNum]["Arrival Time"].grid(row=row, column=3, sticky="nsew")
-            self.widgets[TrainNum]["Depart Time"].grid(row=row, column=4, sticky="nsew")
-            self.widgets[TrainNum]["Num B"].grid(row=row, column=5, sticky="nsew")
-            self.widgets[TrainNum]["DepaF"].grid(row=row, column=6, sticky="nsew")
-            self.widgets[TrainNum]["ArrA"].grid(row=row, column=7, sticky="nsew")
-            Radiobutton(frame1, variable=self.trainUpdate, value=TrainNum).grid(row=row, column=8)
+                self.widgets[TrainNum]["Train Number"].grid(row=row, column=0, sticky="nsew")
+                self.widgets[TrainNum]["Time"].grid(row=row,column=1,sticky="nsew")
+                self.widgets[TrainNum]["Station"].grid(row=row, column=2, sticky="nsew")
+                self.widgets[TrainNum]["Arrival Time"].grid(row=row, column=3, sticky="nsew")
+                self.widgets[TrainNum]["Depart Time"].grid(row=row, column=4, sticky="nsew")
+                self.widgets[TrainNum]["Num B"].grid(row=row, column=5, sticky="nsew")
+                self.widgets[TrainNum]["DepaF"].grid(row=row, column=6, sticky="nsew")
+                self.widgets[TrainNum]["ArrA"].grid(row=row, column=7, sticky="nsew")
+                Radiobutton(frame1, variable=self.trainUpdate, value=TrainNum).grid(row=row, column=8)
 
-        frame1.grid_columnconfigure(1, weight=1)
-        frame1.grid_columnconfigure(2, weight=1)
-        # invisible row after last row gets all extra space
-        frame1.grid_rowconfigure(row + 1, weight=1)
-        b=Button(frame2,text='Next',command =self.upDateRes3)
-        b.pack(side=RIGHT)
-        Button(frame2,text='Back', command=self.goBackToId).pack(side=LEFT)
+            frame1.grid_columnconfigure(1, weight=1)
+            frame1.grid_columnconfigure(2, weight=1)
+            # invisible row after last row gets all extra space
+            frame1.grid_rowconfigure(row + 1, weight=1)
+            b=Button(frame2,text='Next',command =self.upDateRes3)
+            b.pack(side=RIGHT)
+            Button(frame2,text='Back', command=self.goBackToId).pack(side=LEFT)
 
     def upDateRes3(self):
         self.updateWin2.withdraw()
