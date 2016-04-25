@@ -236,7 +236,10 @@ class GUI:
             self.allReservation = [(self.train.get(),self.departDatesv.get(),self.dVar,departsFrom,arrivesAt,self.classVar,pr,self.bags.get(),self.name.get(),0)]
         elif self.removeTrue:
             self.allReservation = self.allReservation + [(self.train.get(), self.departDatesv.get(), self.dVar, departsFrom, arrivesAt, self.classVar, pr, self.bags.get(), self.name.get(),0)]
-
+        else:
+            self.removeTrue = True
+            # self.allReservation = [()]
+            # self.allReservation = self.oldvalues + [(self.train.get(), self.departDatesv.get(), self.dVar, departsFrom, arrivesAt, self.classVar, pr, self.bags.get(), self.name.get(),0)]
         Label(frame, text="Train Number", font=("Calibri", 12, "bold")).grid(row=2,column=0,sticky='nsew')
         Label(frame, text="Date", font=("Calibri", 12, "bold")).grid(row=2, column=1, sticky='nsew')
         Label(frame, text="Time", font=("Calibri", 12, "bold")).grid(row=2, column=2, sticky='nsew')
@@ -333,6 +336,8 @@ class GUI:
         self.reservationWin.withdraw()
         self.rootWinSearch.deiconify()
     def removeTic(self):
+        print("|||||||||||||||||||||||||||||||||")
+        print(self.allReservation)
         del self.allReservation[(self.removeLine.get()-4)]
         self.reservationWin.destroy()
         self.removeTrue= False

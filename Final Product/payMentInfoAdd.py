@@ -69,7 +69,7 @@ class GUI:
 
         submit3 = Button(self.rootWin, text="Back", command=self.back)
         submit3.grid(row=8, column=3, columnspan=2, pady=20)
-        
+
         db = self.connect()
         cursor = db.cursor()
         cantdelete = "Select CardNumber,UserName From (Select CardNumber,UserName,ReservationID,Max(DD) " \
