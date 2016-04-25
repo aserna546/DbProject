@@ -128,7 +128,7 @@ class GUI:
         db = self.connect()
         cursor = db.cursor()
         print(self.delCard.get())
-        query = "DELETE FROM PaymentInfo WHERE ='%s'" % (self.delCard.get())
+        query = "DELETE FROM PaymentInfo WHERE CardNumber='%s'" % (self.delCard.get())
         #query = "DELETE FROM PaymentInfo WHERE RIGHT(CardNumber,4) ='%s'" % (self.delCard.get())
 
         cursor.execute(query)

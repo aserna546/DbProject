@@ -50,6 +50,13 @@ class GUI:
         submit = Button(self.rootWinSearch, text="Find Trains", command=self.selectDepart)
         submit.grid(row=5, column=1, padx=10, pady=15, sticky=E)
 
+        submit = Button(self.rootWinSearch, text="Back", command=self.goBack1stPage)
+        submit.grid(row=5, column=0, padx=7, pady=15, sticky=E)
+
+    def goBack1stPage(self):
+        self.rootWinSearch.destroy()
+        self.mainFrame.deiconify()
+
     def selectDepart(self):
         departsFrom = self.departsFrom.get()
         departsFrom = departsFrom[departsFrom.index("(") + 1:departsFrom.rindex(")")]
@@ -319,6 +326,7 @@ class GUI:
     def addaCard(self):
         self.reservationWin.destroy()
         paymentWindow = Toplevel()
+        self.removeTrue = False
         payMentInfoAdd.GUI(paymentWindow, self.userNam, self.makeReservation)
 
     def goBackToIntialWin(self):
