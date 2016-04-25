@@ -6,9 +6,8 @@ from tkinter import messagebox
 import datetime
 
 class GUI:
-    def __init__(self, rootWin, userNam, function, cards):
+    def __init__(self, rootWin, userNam, function):
         # creates window
-        self.cards = cards
         self.userNam = userNam
         self.func = function
         self.rootWin = rootWin
