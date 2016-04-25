@@ -75,7 +75,7 @@ class Train:
 
     def gotoMakeReservation(self):
         self.mainFrame.withdraw()
-        makeReservation.GUI(self.usernameInput)
+        makeReservation.GUI(self.usernameInput, self.mainFrame)
 
     def goupDateReservation(self):
         self.mainFrame.withdraw()

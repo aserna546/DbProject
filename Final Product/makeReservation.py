@@ -7,8 +7,9 @@ from tkinter import messagebox
 import datetime
 import payMentInfoAdd
 class GUI:
-    def __init__(self, userNam):
+    def __init__(self, userNam, mainFrame):
         self.rootWinSearch = Toplevel()
+        self.mainFrame = mainFrame
         self.userNam = userNam.get()
         self.rootWinSearch.title("Make a Reservation")
         #self.rootWinCF.withdraw()
@@ -364,10 +365,11 @@ class GUI:
 
         frame2 = Frame(self.submitResWin)
         frame2.pack(side=TOP)
-        Button(frame2,text='Go Back to Choose Functionality').pack()
+        Button(frame2,text='Go Back to Choose Functionality', command=self.goBackToMain).pack()
 
-
-
+    def goBackToMain(self):
+        self.submitResWin.destroy()
+        self.mainFrame.deiconify()
     def departTree(self, frame):
         tree = Treeview(frame, selectmode='browse')
         tree.pack()
