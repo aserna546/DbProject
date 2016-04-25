@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9022942-6991-4aa6-b4fb-40ab1facb538" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final Product/ExamplesToHelp/Somonelse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final Product/ExamplesToHelp/treeViewAnother.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final Product/ExamplesToHelp/treeViewExample.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Final Product/ExamplesToHelp/viewTrainSchedule.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final Product/Login.py" afterPath="$PROJECT_DIR$/Final Product/Login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final Product/makeReservation.py" afterPath="$PROJECT_DIR$/Final Product/makeReservation.py" />
     </list>
     <ignored path="DbProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +28,7 @@
     <SUITE FILE_PATH="coverage/DbProject$phase3.coverage" NAME="phase3 Coverage Results" MODIFIED="1461118843401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Train_4400-master" />
     <SUITE FILE_PATH="coverage/DbProject$viewTrainSchedule.coverage" NAME="viewTrainSchedule Coverage Results" MODIFIED="1461430985387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kevin-Tasks" />
     <SUITE FILE_PATH="coverage/DbProject$Newphase3.coverage" NAME="Newphase3 Coverage Results" MODIFIED="1461292317452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Train_4400-master" />
-    <SUITE FILE_PATH="coverage/DbProject$Login.coverage" NAME="Login Coverage Results" MODIFIED="1461547534833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final Product" />
+    <SUITE FILE_PATH="coverage/DbProject$Login.coverage" NAME="Login Coverage Results" MODIFIED="1461547776396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Final Product" />
     <SUITE FILE_PATH="coverage/DbProject$searchReservation.coverage" NAME="searchReservation Coverage Results" MODIFIED="1461515587831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kevin-Tasks" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -41,7 +43,7 @@
       <file leaf-file-name="login.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Final Product/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
+            <state relative-caret-position="-3453">
               <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -235,7 +237,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="33" />
+    <option name="x" value="47" />
+    <option name="y" value="27" />
     <option name="width" value="1616" />
     <option name="height" value="939" />
   </component>
@@ -337,24 +340,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Final Product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final Product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ExamplesToHelp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -856,14 +841,28 @@
       <option name="project" value="LOCAL" />
       <updated>1461545801118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mainFrame submit works">
+      <created>1461547656333</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1461547656333</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete stuff">
+      <created>1461548078586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1461548078586</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="33" width="1616" height="939" extended-state="0" />
-    <editor active="true" />
+    <frame x="47" y="27" width="1616" height="939" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34591585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34591585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -919,7 +918,9 @@
     <MESSAGE value="final product so everyone can see" />
     <MESSAGE value="All files present and sql stuff" />
     <MESSAGE value="everything is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything is done" />
+    <MESSAGE value="mainFrame submit works" />
+    <MESSAGE value="delete stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1273,7 +1274,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Final Product/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
+        <state relative-caret-position="-3453">
           <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
